@@ -22,7 +22,7 @@ import ru.epocharmory.*;
 /** Native model/hand regression captures. Not included in the installed JAR. */
 @EventBusSubscriber(modid=EpochArmory.ID,value=Dist.CLIENT)
 public final class WeaponVisualProbe {
-    private static final String[] SHEETS={"vanilla_reference","sizes","two_handed","catalog","held_right_a","held_left_a","held_right_b","held_left_b","held_right_c","held_left_c","details","materials","poses","reload"};
+    private static final String[] SHEETS={"vanilla_reference","sizes","two_handed","cutting_edges","catalog","held_right_a","held_left_a","held_right_b","held_left_b","held_right_c","held_left_c","details","materials","poses","reload"};
     private static final int MOD_FIRST_VIEWS=WeaponKind.values().length*4;
     private static final int TOTAL_FIRST_VIEWS=MOD_FIRST_VIEWS+6;
     private static int stage=-1,ticks,total,clearFrames,swingTick;
@@ -40,7 +40,7 @@ public final class WeaponVisualProbe {
             if(mc.getOverlay()!=null){clearFrames=0;return;}else clearFrames++;
             if(stage<0){
                 mc.options.hideGui=true;mc.options.bobView().set(false);mc.options.fov().set(70);
-                int bakedCount=0,alignmentCount=0;
+                int bakedCount=0,alignmentCount=0,cuttingEdgeCount=0;
                 var vanilla=mc.getItemRenderer().getModel(new ItemStack(Items.DIAMOND_SWORD),mc.level,mc.player,0);
                 for(var metal:Metal.values())for(var kind:WeaponKind.values()){
                     var stack=Content.stack(metal.key+"_"+kind.key);var model=mc.getItemRenderer().getModel(stack,mc.level,mc.player,0);
@@ -58,6 +58,15 @@ public final class WeaponVisualProbe {
                             var expected=reference.last().pose().transformDirection(new Vector3f(1,1,0)).normalize();
                             if(actual.dot(expected)<.99999f)throw new IllegalStateException("Weapon points away from vanilla sword: "+stack+" "+context+" actual="+actual+" expected="+expected);
                             alignmentCount++;
+                            if(kind==WeaponKind.BATTLEAXE||kind==WeaponKind.HALBERD){
+                                // The cutting head extends along mesh +X. It must
+                                // face forward, opposite the old player-facing basis,
+                                // while the +Y shaft keeps the vanilla sword direction.
+                                var edge=pose.last().pose().transformDirection(new Vector3f(1,0,0)).normalize();
+                                var forward=reference.last().pose().transformDirection(new Vector3f(-1,1,0)).normalize();
+                                if(edge.dot(forward)<.99999f)throw new IllegalStateException("Cutting edge faces the player: "+stack+" "+context+" edge="+edge+" forward="+forward);
+                                cuttingEdgeCount++;
+                            }
                         }
                         var quads=baked.getQuads(null,null,net.minecraft.util.RandomSource.create());
                         if(quads.isEmpty())throw new IllegalStateException("Empty weapon model "+stack+" "+context);
@@ -67,6 +76,7 @@ public final class WeaponVisualProbe {
                 }
                 System.out.println("EPOCH_WEAPON_BAKED "+bakedCount+" contexts without missing models/textures");
                 System.out.println("EPOCH_WEAPON_ALIGNMENT "+alignmentCount+" held directions match the actual vanilla diamond sword");
+                System.out.println("EPOCH_WEAPON_CUTTING_EDGES "+cuttingEdgeCount+" axe/halberd cutting heads face forward in both hands and perspectives");
                 var holder=player("longsword",InteractionHand.MAIN_HAND,false,false);
                 for(var metal:Metal.values()){
                     var stack=Content.stack(metal.key+"_longsword");holder.setItemInHand(InteractionHand.MAIN_HAND,stack);
@@ -98,7 +108,7 @@ public final class WeaponVisualProbe {
                     if(mc.options.hideGui)throw new IllegalStateException("First-person hand rendering disabled");
                     grab(mc,"first_"+(vanillaReference?"vanilla_sword":kind.key)+"_"+(leftMain?"left_main":hand==InteractionHand.MAIN_HAND?"right":"left")+(attack?"_swing":"_idle"));
                     stage++;ticks=0;
-                    if(stage-SHEETS.length==TOTAL_FIRST_VIEWS){System.out.println("EPOCH_WEAPON_SUCCESS: 180 weapons, 18 shapes, 1260 baked contexts, 720 vanilla direction comparisons, two-hand longsword poses, sizes, both hands, attacks, slim/crouch, shield/armor, reload, 72 weapon, 4 vanilla and 2 left-main longsword first-person views");stage=999;mc.stop();}
+                    if(stage-SHEETS.length==TOTAL_FIRST_VIEWS){System.out.println("EPOCH_WEAPON_SUCCESS: 180 weapons, 18 shapes, 1260 baked contexts, 720 vanilla direction comparisons, 80 forward cutting-edge comparisons, two-hand longsword poses, sizes, both hands, attacks, slim/crouch, shield/armor, reload, 72 weapon, 4 vanilla and 2 left-main longsword first-person views");stage=999;mc.stop();}
                     else setupFirstPerson(mc);
                 }
             }
@@ -135,7 +145,7 @@ public final class WeaponVisualProbe {
     }
     private static final class Sheet extends Screen {
         final String mode;int frames;final List<RemotePlayer> players=new ArrayList<>();final List<String> labels=new ArrayList<>();final List<ItemStack> items=new ArrayList<>();
-        Sheet(String mode){super(Component.literal("Epoch Armory · Fantasy Reforged 1.1.1 · оружие"));this.mode=mode;}
+        Sheet(String mode){super(Component.literal("Epoch Armory · Fantasy Reforged 1.1.2 · оружие"));this.mode=mode;}
         @Override protected void init(){
             players.clear();labels.clear();items.clear();frames=0;
             if(mode.equals("vanilla_reference")){
@@ -154,6 +164,12 @@ public final class WeaponVisualProbe {
                 players.add(player("longsword",InteractionHand.MAIN_HAND,false,true));labels.add("crouch");
                 var attack=player("longsword",InteractionHand.MAIN_HAND,false,false);attack.attackAnim=attack.oAttackAnim=.5f;players.add(attack);labels.add("two-hand swing");
                 var blocked=player("longsword",InteractionHand.MAIN_HAND,false,false);blocked.setItemInHand(InteractionHand.OFF_HAND,new ItemStack(Items.SHIELD));players.add(blocked);labels.add("offhand occupied · disabled");
+            }else if(mode.equals("cutting_edges")){
+                for(String key:new String[]{"battleaxe","halberd"}){
+                    players.add(player(key,InteractionHand.MAIN_HAND,false,false));labels.add(key+" · right");
+                    players.add(player(key,InteractionHand.OFF_HAND,false,false));labels.add(key+" · left");
+                    var attack=player(key,InteractionHand.MAIN_HAND,false,false);attack.attackAnim=attack.oAttackAnim=.5f;players.add(attack);labels.add(key+" · swing");
+                }
             }else if(mode.equals("catalog")||mode.equals("reload"))for(var k:WeaponKind.values()){items.add(Content.stack("steel_"+k.key));labels.add(k.russian);}
             else if(mode.equals("details"))for(String key:new String[]{"katana","mace","battleaxe","rapier","war_hammer","flail"}){items.add(Content.stack("steel_"+key));labels.add(key);}
             else if(mode.equals("materials"))for(var m:Metal.values()){items.add(Content.stack(m.key+"_katana"));labels.add(m.key);}
@@ -185,7 +201,7 @@ public final class WeaponVisualProbe {
                 int cols=3,cell=width/cols,rh=(height-43)/2;
                 for(int i=0;i<players.size();i++){
                     int cx=(i%cols)*cell+cell/2,cy=43+(i/cols)*rh;var p=players.get(i);
-                    InventoryScreen.renderEntityInInventory(g,cx,cy+rh/2,49,new Vector3f(0,p.getBbHeight()/2+.13f,0),new Quaternionf().rotateZ((float)Math.PI).rotateY(-.45f).rotateX(.025f),null,p);
+                    InventoryScreen.renderEntityInInventory(g,cx,cy+rh/2,49,new Vector3f(0,p.getBbHeight()/2+.13f,0),new Quaternionf().rotateZ((float)Math.PI).rotateY(mode.equals("cutting_edges")?-1.2f:-.45f).rotateX(.025f),null,p);
                     g.drawCenteredString(font,labels.get(i),cx,cy+rh-18,0xFFCAD5E1);
                 }
             }

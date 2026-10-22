@@ -8148,8 +8148,8 @@
     "thirdperson_righthand": {
       "rotation": [
         0,
-        -90,
-        10
+        90,
+        -10
       ],
       "translation": [
         0,
@@ -8165,8 +8165,8 @@
     "firstperson_righthand": {
       "rotation": [
         0,
-        -90,
-        -20
+        90,
+        20
       ],
       "translation": [
         -2,
@@ -8182,8 +8182,8 @@
     "thirdperson_lefthand": {
       "rotation": [
         0,
-        90,
-        -10
+        -90,
+        10
       ],
       "translation": [
         0,
@@ -8199,8 +8199,8 @@
     "firstperson_lefthand": {
       "rotation": [
         0,
-        90,
-        20
+        -90,
+        -20
       ],
       "translation": [
         -2,

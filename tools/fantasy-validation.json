@@ -1,36 +1,43 @@
 {
-  "mod": "1.1.1",
+  "mod": "1.1.2",
   "build": "passed",
-  "server_gametests": {
-    "passed": 17,
-    "failed": 0
-  },
   "static_checks": [
-    "validate_armor.py",
     "validate_weapons.py",
     "validate_resources.py"
   ],
   "runtime_success": [
-    "EPOCH_ARMOR_SUCCESS",
     "EPOCH_WEAPON_SUCCESS"
   ],
   "current_client_screenshots": {
-    "armor": 9,
-    "weapons": 92
+    "weapons": 93
   },
   "inherited_unchanged_checks": {
+    "server_gametests": {
+      "version": "1.1.1",
+      "passed": 17,
+      "failed": 0,
+      "rerun_for_this_patch": false
+    },
+    "armor": {
+      "version": "1.1.1",
+      "screenshots": 9,
+      "static_and_runtime": "passed; geometry/textures/code unchanged"
+    },
     "shields": {
       "version": "1.1.0",
       "screenshots": 49,
-      "static_and_runtime": "passed; geometry/textures unchanged"
+      "static_and_runtime": "passed; geometry/textures/code unchanged"
     }
   },
   "vanilla_held_direction_checks": 720,
+  "cutting_edge_direction_checks": 80,
+  "regression_before_fix": "reproduced in the real client with unchanged 1.1.1 resources",
   "longsword_two_handed_materials": 10,
   "longsword_to_dagger_length_ratio": 3.75,
   "item_ids_recipes_numeric_stats": "unchanged",
-  "longsword_rule": "empty offhand required; blocks player attacks and offhand use; two-handed first/third-person display",
-  "art_fingerprint": "059d00b8ac01e87e1de25365441afce3874dbbbec1702b6a002c8d5b406ba3a0",
+  "longsword_rule": "unchanged from 1.1.1: empty offhand required; two-handed first/third-person display",
+  "art_fingerprint": "fdca1b68df56467aee65c31adffaa38805539052af58fdec82845e0c23d4ba25",
+  "art_fingerprint_algorithm": "SHA-256 over sorted resource paths relative to repository, NUL, then file bytes",
   "rendering_backend": "Minecraft / Mesa software OpenGL / Xorg dummy",
   "third_party_mods_and_shaders": "not_tested"
 }

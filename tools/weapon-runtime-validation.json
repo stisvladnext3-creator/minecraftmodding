@@ -1,5 +1,5 @@
 {
-  "mod": "1.1.1",
+  "mod": "1.1.2",
   "minecraft": "1.21.1",
   "neoforge": "21.1.262",
   "client_result": "EPOCH_WEAPON_SUCCESS",
@@ -12,6 +12,7 @@
   "first_person_fov": 70,
   "screenshots": [
     "art/qa/weapons/weapon_catalog.png",
+    "art/qa/weapons/weapon_cutting_edges.png",
     "art/qa/weapons/weapon_details.png",
     "art/qa/weapons/weapon_first_arming_sword_left_idle.png",
     "art/qa/weapons/weapon_first_arming_sword_left_swing.png",
@@ -216,14 +217,18 @@
   },
   "build": "passed",
   "server_required_tests": {
+    "version": "1.1.1",
     "passed": 17,
-    "failed": 0
+    "failed": 0,
+    "rerun_for_this_patch": false
   },
-  "art_revision": "1.1.1 forehead, vanilla alignment, sizes and two-handed longsword",
-  "client_log": "epoch-111-final.log",
+  "art_revision": "1.1.2 axe/halberd cutting heads face away from the holder",
+  "client_log": "epoch-112-final.log",
   "screenshots_verified_current_run": true,
   "vanilla_direction_checks": 720,
   "two_handed_material_checks": 10,
   "vanilla_reference_views": 4,
-  "left_main_longsword_views": 2
+  "left_main_longsword_views": 2,
+  "cutting_edge_direction_checks": 80,
+  "regression_before_fix": "Cutting edge faces the player: iron_battleaxe THIRD_PERSON_LEFT_HAND"
 }

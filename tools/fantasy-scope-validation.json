@@ -1,15 +1,17 @@
 {
-  "base_release": "1.1.0",
-  "mod": "1.1.1",
+  "base_release": "1.1.1",
+  "mod": "1.1.2",
   "item_ids_recipes_numeric_stats": "unchanged",
-  "authorized_behavior_change": "Longsword requires empty offhand; blocks attacks and offhand item use; two-handed client rendering",
+  "gameplay": "unchanged",
   "visual_changes": [
-    "lamellar forehead bar removed",
-    "vanilla sword held directions",
-    "weapon size progression in hands and inventory"
+    "battleaxe and halberd held poses: cutting heads face away from holder; both hands and perspectives"
   ],
+  "geometry_textures_sizes_inventory_fixed_ground_poses": "unchanged",
+  "verification": "Compared base and current model JSON: only held rotations differ; runtime source unchanged except excluded visual probe",
   "authoritative_unchanged_files": [
     "src/main/java/ru/epocharmory/WeaponKind.java",
+    "src/main/java/ru/epocharmory/Combat.java",
+    "src/main/java/ru/epocharmory/client/LongswordRendering.java",
     "src/main/java/ru/epocharmory/Metal.java",
     "src/main/java/ru/epocharmory/Content.java",
     "src/main/resources/data"

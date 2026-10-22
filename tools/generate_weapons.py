@@ -301,6 +301,11 @@ def display(a):
     held_scale=HELD_LENGTHS[kind]/(a.high[1]-a.low[1])
     first_scale=held_scale*.72
     result={}
+    # These asymmetrical heads extend along mesh +X. Turn them 180 degrees
+    # around their local Y shaft so the cutting edge faces away from the holder.
+    # For our XYZ Euler rotations Ry(y) Rz(z) Ry(180) = Ry(y+180) Rz(-z)
+    # at y=-90. Negating yaw and roll therefore preserves the shaft direction.
+    edge_sign=-1 if kind in ('battleaxe','halberd') else 1
     for hand,sign in (('right',1),('left',-1)):
         # Minecraft 1.21.1 item/handheld uses (0,-90,55) in third person
         # and (0,-90,25) in first person, mirrored in the left-hand entry.
@@ -308,8 +313,8 @@ def display(a):
         # Subtract 45 degrees of Z rotation to match the actual blade axis.
         # Keep the mesh's grip pivot at (8,8,8), rather than copying the
         # translation that compensates for a vanilla sprite's off-centre grip.
-        result[f'thirdperson_{hand}hand']={'rotation':[0,-90*sign,10*sign],'translation':[0,0,0],'scale':[held_scale]*3}
-        result[f'firstperson_{hand}hand']={'rotation':[0,-90*sign,-20*sign],'translation':[-2,-1,-1],'scale':[first_scale]*3}
+        result[f'thirdperson_{hand}hand']={'rotation':[0,-90*sign*edge_sign,10*sign*edge_sign],'translation':[0,0,0],'scale':[held_scale]*3}
+        result[f'firstperson_{hand}hand']={'rotation':[0,-90*sign*edge_sign,-20*sign*edge_sign],'translation':[-2,-1,-1],'scale':[first_scale]*3}
     # Inventory icons also convey the difference without making small blades
     # unreadable; do not auto-fit every weapon to the same icon dimensions.
     result['gui']=fit(a,[15,-35,-35],13.2*math.sqrt(HELD_LENGTHS[kind]/44))
