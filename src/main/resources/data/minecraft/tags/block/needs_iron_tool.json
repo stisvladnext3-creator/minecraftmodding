@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "epocharmory:bloomery",
+    "epocharmory:crucible",
+    "epocharmory:forge",
+    "epocharmory:forging_anvil",
+    "epocharmory:quench_tub",
+    "epocharmory:tempering_furnace",
+    "epocharmory:wire_bench",
+    "epocharmory:riveting_bench",
+    "epocharmory:grindstone_bench",
+    "epocharmory:armorer_bench",
+    "epocharmory:electrolyzer",
+    "epocharmory:tin_ore",
+    "epocharmory:deepslate_tin_ore",
+    "epocharmory:bauxite_ore",
+    "epocharmory:deepslate_bauxite_ore",
+    "epocharmory:rutile_ore",
+    "epocharmory:deepslate_rutile_ore",
+    "epocharmory:dolomite_ore",
+    "epocharmory:deepslate_dolomite_ore"
+  ]
+}

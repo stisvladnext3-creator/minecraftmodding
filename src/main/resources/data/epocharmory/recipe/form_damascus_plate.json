@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forging_anvil",
+  "inputs": [
+    {
+      "item": "epocharmory:hot_damascus_billet",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:hot_damascus_plate",
+    "count": 1
+  },
+  "time": 100,
+  "tool": "epocharmory:smith_hammer",
+  "hot": true
+}

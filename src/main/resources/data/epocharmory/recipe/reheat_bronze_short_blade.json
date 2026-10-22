@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forge",
+  "inputs": [
+    {
+      "item": "epocharmory:hot_bronze_short_blade",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:hot_bronze_short_blade",
+    "count": 1
+  },
+  "time": 50,
+  "min_heat": 600,
+  "max_heat": 900
+}

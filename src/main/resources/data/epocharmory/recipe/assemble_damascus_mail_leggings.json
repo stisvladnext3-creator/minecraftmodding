@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:damascus_mail_panel",
+      "count": 7
+    },
+    {
+      "item": "epocharmory:padded_lining",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:damascus_rivets",
+      "count": 4
+    }
+  ],
+  "result": {
+    "id": "epocharmory:damascus_mail_leggings",
+    "count": 1
+  },
+  "time": 120,
+  "tool": "epocharmory:rivet_punch"
+}

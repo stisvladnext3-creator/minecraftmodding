@@ -1,0 +1,15 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "textures": {
+    "particle": "epocharmory:item/shields/iron_edge"
+  },
+  "base": {
+    "parent": "epocharmory:item/iron_targe_shield_blocking_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "epocharmory:item/iron_targe_shield_icon"
+    }
+  }
+}

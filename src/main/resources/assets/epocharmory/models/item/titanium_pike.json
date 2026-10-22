@@ -1,0 +1,14 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "textures": {
+    "particle": "epocharmory:block/titanium_metal"
+  },
+  "base": {
+    "parent": "epocharmory:item/titanium_pike_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "epocharmory:item/titanium_pike_icon"
+    }
+  }
+}

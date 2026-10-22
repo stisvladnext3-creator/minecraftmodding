@@ -1,0 +1,16 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "wire_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_gold_plate",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:gold_rivets",
+    "count": 16
+  },
+  "time": 40,
+  "tool": "epocharmory:metal_shears"
+}

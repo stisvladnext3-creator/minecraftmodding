@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "tempering_furnace",
+  "inputs": [
+    {
+      "item": "epocharmory:quenched_titanium_head",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:tempered_titanium_head",
+    "count": 1
+  },
+  "time": 100,
+  "min_heat": 500,
+  "max_heat": 700
+}

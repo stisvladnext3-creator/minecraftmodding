@@ -1,0 +1,10 @@
+{
+  "parent": "epocharmory:item/shields/kalkan",
+  "textures": {
+    "front": "epocharmory:item/gold_kalkan_shield",
+    "back": "epocharmory:item/shields/back",
+    "metal": "epocharmory:item/shields/gold_edge",
+    "leather": "epocharmory:item/shields/leather",
+    "particle": "epocharmory:item/shields/gold_edge"
+  }
+}

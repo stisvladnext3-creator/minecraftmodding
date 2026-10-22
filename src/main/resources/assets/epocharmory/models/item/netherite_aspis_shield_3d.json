@@ -1,0 +1,10 @@
+{
+  "parent": "epocharmory:item/shields/aspis",
+  "textures": {
+    "front": "epocharmory:item/netherite_aspis_shield",
+    "back": "epocharmory:item/shields/back",
+    "metal": "epocharmory:item/shields/netherite_edge",
+    "leather": "epocharmory:item/shields/leather",
+    "particle": "epocharmory:item/shields/netherite_edge"
+  }
+}

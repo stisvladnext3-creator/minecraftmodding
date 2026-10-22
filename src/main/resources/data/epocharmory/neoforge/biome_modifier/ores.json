@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "epocharmory:tin_ore",
+    "epocharmory:bauxite_ore",
+    "epocharmory:rutile_ore",
+    "epocharmory:dolomite_ore"
+  ],
+  "step": "underground_ores"
+}

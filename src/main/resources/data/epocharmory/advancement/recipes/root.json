@@ -1,0 +1,40 @@
+{
+  "criteria": {
+    "has_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "epocharmory:bloomery",
+      "epocharmory:crucible",
+      "epocharmory:forge",
+      "epocharmory:forging_anvil",
+      "epocharmory:quench_tub",
+      "epocharmory:tempering_furnace",
+      "epocharmory:wire_bench",
+      "epocharmory:riveting_bench",
+      "epocharmory:grindstone_bench",
+      "epocharmory:armorer_bench",
+      "epocharmory:electrolyzer",
+      "epocharmory:smiths_codex",
+      "epocharmory:smith_hammer",
+      "epocharmory:tongs",
+      "epocharmory:rivet_punch",
+      "epocharmory:metal_shears",
+      "epocharmory:leather_strap",
+      "epocharmory:padded_lining",
+      "epocharmory:wooden_shaft",
+      "epocharmory:shield_board",
+      "epocharmory:flux",
+      "epocharmory:clay_slurry"
+    ]
+  }
+}

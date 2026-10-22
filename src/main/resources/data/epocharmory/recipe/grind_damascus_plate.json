@@ -1,0 +1,20 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "grindstone_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:tempered_damascus_plate",
+      "count": 1
+    },
+    {
+      "item": "minecraft:flint",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:finished_damascus_plate",
+    "count": 1
+  },
+  "time": 40,
+  "tool": "epocharmory:tongs"
+}

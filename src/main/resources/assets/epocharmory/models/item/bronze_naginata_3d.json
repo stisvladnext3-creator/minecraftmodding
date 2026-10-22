@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/naginata",
+  "textures": {
+    "surface": "epocharmory:item/weapons/bronze_naginata",
+    "particle": "epocharmory:block/bronze_metal"
+  }
+}

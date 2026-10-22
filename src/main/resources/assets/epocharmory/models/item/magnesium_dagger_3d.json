@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/dagger",
+  "textures": {
+    "surface": "epocharmory:item/weapons/magnesium_dagger",
+    "particle": "epocharmory:block/magnesium_metal"
+  }
+}

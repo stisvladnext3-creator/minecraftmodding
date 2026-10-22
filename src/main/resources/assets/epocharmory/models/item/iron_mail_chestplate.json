@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "epocharmory:item/iron_mail_chestplate"
+  }
+}

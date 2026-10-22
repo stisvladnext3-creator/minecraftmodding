@@ -1,0 +1,16 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "wire_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:aluminium_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:aluminium_wire",
+    "count": 8
+  },
+  "time": 80,
+  "tool": "epocharmory:tongs"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/halberd",
+  "textures": {
+    "surface": "epocharmory:item/weapons/aluminium_halberd",
+    "particle": "epocharmory:block/aluminium_metal"
+  }
+}

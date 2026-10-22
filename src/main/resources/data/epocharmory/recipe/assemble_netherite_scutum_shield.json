@@ -1,0 +1,32 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_damascus_plate",
+      "count": 5
+    },
+    {
+      "item": "epocharmory:shield_board",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:damascus_rivets",
+      "count": 4
+    },
+    {
+      "item": "minecraft:netherite_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:netherite_scutum_shield",
+    "count": 1
+  },
+  "time": 160,
+  "tool": "epocharmory:rivet_punch"
+}

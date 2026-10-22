@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/sabre",
+  "textures": {
+    "surface": "epocharmory:item/weapons/diamond_sabre",
+    "particle": "epocharmory:block/diamond_metal"
+  }
+}

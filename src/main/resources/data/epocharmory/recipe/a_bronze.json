@@ -1,0 +1,25 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "crucible",
+  "inputs": [
+    {
+      "item": "minecraft:copper_ingot",
+      "count": 3
+    },
+    {
+      "item": "epocharmory:tin_ingot",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:flux",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:bronze_ingot",
+    "count": 4
+  },
+  "time": 160,
+  "min_heat": 1000,
+  "max_heat": 1350
+}

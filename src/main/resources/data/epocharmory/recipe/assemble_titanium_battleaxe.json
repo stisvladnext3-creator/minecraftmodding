@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_titanium_head",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:wooden_shaft",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:titanium_rivets",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "epocharmory:titanium_battleaxe",
+    "count": 1
+  },
+  "time": 80,
+  "tool": "epocharmory:smith_hammer"
+}

@@ -1,0 +1,32 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_steel_short_blade",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:wooden_shaft",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:steel_rivets",
+      "count": 2
+    },
+    {
+      "item": "minecraft:diamond",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "epocharmory:diamond_spear",
+    "count": 1
+  },
+  "time": 80,
+  "tool": "epocharmory:smith_hammer"
+}

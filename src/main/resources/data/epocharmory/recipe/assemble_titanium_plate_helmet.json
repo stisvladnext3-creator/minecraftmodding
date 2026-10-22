@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_titanium_plate",
+      "count": 5
+    },
+    {
+      "item": "epocharmory:padded_lining",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:titanium_rivets",
+      "count": 8
+    }
+  ],
+  "result": {
+    "id": "epocharmory:titanium_plate_helmet",
+    "count": 1
+  },
+  "time": 160,
+  "tool": "epocharmory:rivet_punch"
+}

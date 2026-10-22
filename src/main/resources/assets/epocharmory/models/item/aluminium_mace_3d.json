@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/mace",
+  "textures": {
+    "surface": "epocharmory:item/weapons/aluminium_mace",
+    "particle": "epocharmory:block/aluminium_metal"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "tempering_furnace",
+  "inputs": [
+    {
+      "item": "epocharmory:clay_hardened_steel_blade",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:tempered_hamon_steel_blade",
+    "count": 1
+  },
+  "time": 160,
+  "min_heat": 250,
+  "max_heat": 450
+}

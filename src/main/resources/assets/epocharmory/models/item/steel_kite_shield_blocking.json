@@ -1,0 +1,15 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "textures": {
+    "particle": "epocharmory:item/shields/steel_edge"
+  },
+  "base": {
+    "parent": "epocharmory:item/steel_kite_shield_blocking_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "epocharmory:item/steel_kite_shield_icon"
+    }
+  }
+}

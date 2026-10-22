@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/arming_sword",
+  "textures": {
+    "surface": "epocharmory:item/weapons/magnesium_arming_sword",
+    "particle": "epocharmory:block/magnesium_metal"
+  }
+}

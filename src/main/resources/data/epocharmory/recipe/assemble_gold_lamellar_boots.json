@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:gold_lamellae",
+      "count": 6
+    },
+    {
+      "item": "epocharmory:padded_lining",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:gold_rivets",
+      "count": 8
+    }
+  ],
+  "result": {
+    "id": "epocharmory:gold_lamellar_boots",
+    "count": 1
+  },
+  "time": 100,
+  "tool": "epocharmory:rivet_punch"
+}

@@ -1,0 +1,29 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "crucible",
+  "inputs": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 2
+    },
+    {
+      "item": "minecraft:charcoal",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:flux",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:steel_ingot",
+    "count": 2
+  },
+  "time": 260,
+  "min_heat": 1100,
+  "max_heat": 1400,
+  "byproduct": {
+    "id": "epocharmory:slag",
+    "count": 1
+  }
+}

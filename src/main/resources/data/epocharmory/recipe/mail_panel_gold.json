@@ -1,0 +1,20 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "riveting_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:gold_rings",
+      "count": 8
+    },
+    {
+      "item": "epocharmory:gold_rivets",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "epocharmory:gold_mail_panel",
+    "count": 1
+  },
+  "time": 120,
+  "tool": "epocharmory:rivet_punch"
+}

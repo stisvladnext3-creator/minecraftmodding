@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/kukri",
+  "textures": {
+    "surface": "epocharmory:item/weapons/gold_kukri",
+    "particle": "epocharmory:block/gold_metal"
+  }
+}

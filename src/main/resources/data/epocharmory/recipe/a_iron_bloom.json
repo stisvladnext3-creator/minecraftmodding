@@ -1,0 +1,29 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "bloomery",
+  "inputs": [
+    {
+      "item": "minecraft:raw_iron",
+      "count": 2
+    },
+    {
+      "item": "minecraft:charcoal",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:flux",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:iron_bloom",
+    "count": 3
+  },
+  "time": 240,
+  "min_heat": 1050,
+  "max_heat": 1350,
+  "byproduct": {
+    "id": "epocharmory:slag",
+    "count": 1
+  }
+}

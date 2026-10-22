@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/pike",
+  "textures": {
+    "surface": "epocharmory:item/weapons/aluminium_pike",
+    "particle": "epocharmory:block/aluminium_metal"
+  }
+}

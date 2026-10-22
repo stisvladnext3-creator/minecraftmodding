@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forging_anvil",
+  "inputs": [
+    {
+      "item": "epocharmory:folded_billet",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:damascus_ingot",
+    "count": 1
+  },
+  "time": 160,
+  "tool": "epocharmory:smith_hammer",
+  "hot": true
+}

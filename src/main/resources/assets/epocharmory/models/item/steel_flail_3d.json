@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/flail",
+  "textures": {
+    "surface": "epocharmory:item/weapons/steel_flail",
+    "particle": "epocharmory:block/steel_metal"
+  }
+}

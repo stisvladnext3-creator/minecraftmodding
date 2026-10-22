@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forge",
+  "inputs": [
+    {
+      "item": "epocharmory:magnesium_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:hot_magnesium_billet",
+    "count": 1
+  },
+  "time": 80,
+  "min_heat": 300,
+  "max_heat": 550
+}

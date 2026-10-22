@@ -1,0 +1,20 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "riveting_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:magnesium_rings",
+      "count": 8
+    },
+    {
+      "item": "epocharmory:magnesium_rivets",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "epocharmory:magnesium_mail_panel",
+    "count": 1
+  },
+  "time": 120,
+  "tool": "epocharmory:rivet_punch"
+}

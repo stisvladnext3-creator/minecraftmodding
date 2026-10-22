@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_steel_plate",
+      "count": 4
+    },
+    {
+      "item": "epocharmory:shield_board",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:steel_rivets",
+      "count": 4
+    }
+  ],
+  "result": {
+    "id": "epocharmory:steel_targe_shield",
+    "count": 1
+  },
+  "time": 140,
+  "tool": "epocharmory:rivet_punch"
+}

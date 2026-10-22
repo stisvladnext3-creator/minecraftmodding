@@ -1,0 +1,434 @@
+{
+  "arming_sword": {
+    "parts": 363,
+    "exterior_faces": 332,
+    "bounds": [
+      [
+        3.0,
+        1.5,
+        6.0
+      ],
+      [
+        13.5,
+        29.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 50,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "longsword": {
+    "parts": 492,
+    "exterior_faces": 452,
+    "bounds": [
+      [
+        2.0,
+        -0.5,
+        6.0
+      ],
+      [
+        14.5,
+        31.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 53,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "mace": {
+    "parts": 498,
+    "exterior_faces": 316,
+    "bounds": [
+      [
+        4.0,
+        0.5,
+        4.0
+      ],
+      [
+        12.5,
+        27.0,
+        11.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 40,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "spear": {
+    "parts": 283,
+    "exterior_faces": 315,
+    "bounds": [
+      [
+        4.5,
+        -4.0,
+        6.5
+      ],
+      [
+        12.0,
+        31.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 32,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "katana": {
+    "parts": 355,
+    "exterior_faces": 233,
+    "bounds": [
+      [
+        5.5,
+        -0.5,
+        6.5
+      ],
+      [
+        13.5,
+        31.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 35,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "dagger": {
+    "parts": 217,
+    "exterior_faces": 280,
+    "bounds": [
+      [
+        4.0,
+        1.5,
+        6.0
+      ],
+      [
+        12.5,
+        23.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 35,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "morningstar": {
+    "parts": 50,
+    "exterior_faces": 238,
+    "bounds": [
+      [
+        2.5,
+        0.5,
+        2.5
+      ],
+      [
+        13.5,
+        28.5,
+        13.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 31,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "battleaxe": {
+    "parts": 403,
+    "exterior_faces": 354,
+    "bounds": [
+      [
+        2.0,
+        0.5,
+        6.0
+      ],
+      [
+        19.5,
+        29.5,
+        10.0
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 48,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "halberd": {
+    "parts": 468,
+    "exterior_faces": 384,
+    "bounds": [
+      [
+        2.0,
+        -4.0,
+        6.5
+      ],
+      [
+        18.5,
+        31.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 42,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "war_hammer": {
+    "parts": 111,
+    "exterior_faces": 244,
+    "bounds": [
+      [
+        1.0,
+        0.5,
+        4.5
+      ],
+      [
+        18.5,
+        25.5,
+        11.0
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 38,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "rapier": {
+    "parts": 138,
+    "exterior_faces": 244,
+    "bounds": [
+      [
+        3.5,
+        1.5,
+        5.0
+      ],
+      [
+        13.0,
+        31.5,
+        11.0
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 52,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "sabre": {
+    "parts": 367,
+    "exterior_faces": 294,
+    "bounds": [
+      [
+        4.0,
+        1.5,
+        6.5
+      ],
+      [
+        15.0,
+        30.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 37,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "gladius": {
+    "parts": 354,
+    "exterior_faces": 346,
+    "bounds": [
+      [
+        3.0,
+        1.5,
+        6.0
+      ],
+      [
+        13.5,
+        26.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 44,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "kukri": {
+    "parts": 311,
+    "exterior_faces": 287,
+    "bounds": [
+      [
+        5.0,
+        1.5,
+        6.5
+      ],
+      [
+        16.5,
+        27.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 32,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "katar": {
+    "parts": 274,
+    "exterior_faces": 154,
+    "bounds": [
+      [
+        4.0,
+        4.0,
+        6.5
+      ],
+      [
+        12.5,
+        26.5,
+        9.0
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 30,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "naginata": {
+    "parts": 249,
+    "exterior_faces": 259,
+    "bounds": [
+      [
+        6.0,
+        -4.0,
+        6.5
+      ],
+      [
+        14.5,
+        31.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 30,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "pike": {
+    "parts": 98,
+    "exterior_faces": 222,
+    "bounds": [
+      [
+        6.0,
+        -4.0,
+        6.5
+      ],
+      [
+        10.5,
+        31.5,
+        9.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 24,
+    "texture_size": 256,
+    "closed_edge_junctions": 0
+  },
+  "flail": {
+    "parts": 70,
+    "exterior_faces": 347,
+    "bounds": [
+      [
+        6.5,
+        0.5,
+        2.5
+      ],
+      [
+        21.5,
+        25.5,
+        13.5
+      ]
+    ],
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "atlas_height": 39,
+    "texture_size": 256,
+    "closed_edge_junctions": 2
+  }
+}

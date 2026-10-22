@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/kukri",
+  "textures": {
+    "surface": "epocharmory:item/weapons/magnesium_kukri",
+    "particle": "epocharmory:block/magnesium_metal"
+  }
+}

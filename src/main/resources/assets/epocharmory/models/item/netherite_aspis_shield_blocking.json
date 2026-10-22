@@ -1,0 +1,15 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "textures": {
+    "particle": "epocharmory:item/shields/netherite_edge"
+  },
+  "base": {
+    "parent": "epocharmory:item/netherite_aspis_shield_blocking_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "epocharmory:item/netherite_aspis_shield_icon"
+    }
+  }
+}

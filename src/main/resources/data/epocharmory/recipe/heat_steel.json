@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forge",
+  "inputs": [
+    {
+      "item": "epocharmory:steel_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:hot_steel_billet",
+    "count": 1
+  },
+  "time": 80,
+  "min_heat": 800,
+  "max_heat": 1150
+}

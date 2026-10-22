@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/longsword",
+  "textures": {
+    "surface": "epocharmory:item/weapons/diamond_longsword",
+    "particle": "epocharmory:block/diamond_metal"
+  }
+}

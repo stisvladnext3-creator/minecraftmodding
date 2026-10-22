@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/dagger",
+  "textures": {
+    "surface": "epocharmory:item/weapons/netherite_dagger",
+    "particle": "epocharmory:block/netherite_metal"
+  }
+}

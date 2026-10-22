@@ -1,0 +1,26 @@
+{
+  "mail": {
+    "name": "RANGER",
+    "shells_and_details": 55,
+    "faces": 778,
+    "used_atlas_height": 165
+  },
+  "lamellar": {
+    "name": "DRAKE WARDEN",
+    "shells_and_details": 91,
+    "faces": 1255,
+    "used_atlas_height": 201
+  },
+  "brigandine": {
+    "name": "NIGHT HUNTER",
+    "shells_and_details": 59,
+    "faces": 839,
+    "used_atlas_height": 164
+  },
+  "plate": {
+    "name": "CROWN SENTINEL",
+    "shells_and_details": 57,
+    "faces": 878,
+    "used_atlas_height": 176
+  }
+}

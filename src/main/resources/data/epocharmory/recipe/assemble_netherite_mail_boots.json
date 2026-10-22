@@ -1,0 +1,32 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:damascus_mail_panel",
+      "count": 4
+    },
+    {
+      "item": "epocharmory:padded_lining",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:damascus_rivets",
+      "count": 4
+    },
+    {
+      "item": "minecraft:netherite_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:netherite_mail_boots",
+    "count": 1
+  },
+  "time": 120,
+  "tool": "epocharmory:rivet_punch"
+}

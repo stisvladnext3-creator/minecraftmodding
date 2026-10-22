@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "shields": 100,
+  "shapes": 10,
+  "exterior_faces": 1463,
+  "closed_manifold_shells": true,
+  "overlapping_faces": false,
+  "front_uv_opaque": true,
+  "grip": [
+    8,
+    8,
+    8
+  ],
+  "left_hand": "engine_mirrored",
+  "blocking": "separate_pose_same_geometry"
+}

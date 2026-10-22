@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "tempering_furnace",
+  "inputs": [
+    {
+      "item": "epocharmory:quenched_gold_head",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:tempered_gold_head",
+    "count": 1
+  },
+  "time": 100,
+  "min_heat": 300,
+  "max_heat": 500
+}

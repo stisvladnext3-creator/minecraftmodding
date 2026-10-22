@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/sabre",
+  "textures": {
+    "surface": "epocharmory:item/weapons/magnesium_sabre",
+    "particle": "epocharmory:block/magnesium_metal"
+  }
+}

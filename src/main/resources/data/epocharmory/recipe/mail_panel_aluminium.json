@@ -1,0 +1,20 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "riveting_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:aluminium_rings",
+      "count": 8
+    },
+    {
+      "item": "epocharmory:aluminium_rivets",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "epocharmory:aluminium_mail_panel",
+    "count": 1
+  },
+  "time": 120,
+  "tool": "epocharmory:rivet_punch"
+}

@@ -1,0 +1,61 @@
+{
+  "styles": {
+    "mail": "RANGER",
+    "lamellar": "DRAKE WARDEN",
+    "brigandine": "NIGHT HUNTER",
+    "plate": "CROWN SENTINEL"
+  },
+  "accents": {
+    "iron": [
+      106,
+      190,
+      216
+    ],
+    "bronze": [
+      76,
+      199,
+      162
+    ],
+    "gold": [
+      185,
+      100,
+      224
+    ],
+    "steel": [
+      77,
+      202,
+      233
+    ],
+    "damascus": [
+      184,
+      112,
+      237
+    ],
+    "aluminium": [
+      86,
+      191,
+      220
+    ],
+    "magnesium": [
+      130,
+      209,
+      142
+    ],
+    "titanium": [
+      131,
+      154,
+      240
+    ],
+    "diamond": [
+      68,
+      239,
+      230
+    ],
+    "netherite": [
+      228,
+      105,
+      62
+    ]
+  },
+  "material_source": "material_atlas.png"
+}

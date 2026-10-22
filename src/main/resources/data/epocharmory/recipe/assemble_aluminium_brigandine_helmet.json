@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_aluminium_plate",
+      "count": 3
+    },
+    {
+      "item": "epocharmory:padded_lining",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:aluminium_rivets",
+      "count": 8
+    }
+  ],
+  "result": {
+    "id": "epocharmory:aluminium_brigandine_helmet",
+    "count": 1
+  },
+  "time": 100,
+  "tool": "epocharmory:rivet_punch"
+}

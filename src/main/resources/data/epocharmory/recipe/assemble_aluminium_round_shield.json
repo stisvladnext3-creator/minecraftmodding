@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_aluminium_plate",
+      "count": 3
+    },
+    {
+      "item": "epocharmory:shield_board",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:aluminium_rivets",
+      "count": 4
+    }
+  ],
+  "result": {
+    "id": "epocharmory:aluminium_round_shield",
+    "count": 1
+  },
+  "time": 120,
+  "tool": "epocharmory:rivet_punch"
+}

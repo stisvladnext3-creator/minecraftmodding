@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/gladius",
+  "textures": {
+    "surface": "epocharmory:item/weapons/diamond_gladius",
+    "particle": "epocharmory:block/diamond_metal"
+  }
+}

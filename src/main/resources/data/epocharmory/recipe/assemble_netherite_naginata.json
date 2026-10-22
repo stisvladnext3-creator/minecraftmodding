@@ -1,0 +1,32 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_damascus_long_blade",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:wooden_shaft",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:damascus_rivets",
+      "count": 2
+    },
+    {
+      "item": "minecraft:netherite_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:netherite_naginata",
+    "count": 1
+  },
+  "time": 80,
+  "tool": "epocharmory:smith_hammer"
+}

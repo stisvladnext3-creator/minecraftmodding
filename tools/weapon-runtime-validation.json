@@ -1,0 +1,196 @@
+{
+  "mod": "1.1.0",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.262",
+  "client_result": "EPOCH_WEAPON_SUCCESS",
+  "loaded_items": 180,
+  "shape_models": 18,
+  "render_contexts_per_item": 7,
+  "baked_context_checks": 1260,
+  "first_person_views": 72,
+  "first_person_hand_rendering": true,
+  "first_person_fov": 70,
+  "screenshots": [
+    "art/qa/weapons/weapon_catalog.png",
+    "art/qa/weapons/weapon_held_right_a.png",
+    "art/qa/weapons/weapon_held_left_a.png",
+    "art/qa/weapons/weapon_held_right_b.png",
+    "art/qa/weapons/weapon_held_left_b.png",
+    "art/qa/weapons/weapon_held_right_c.png",
+    "art/qa/weapons/weapon_held_left_c.png",
+    "art/qa/weapons/weapon_details.png",
+    "art/qa/weapons/weapon_materials.png",
+    "art/qa/weapons/weapon_poses.png",
+    "art/qa/weapons/weapon_reload.png",
+    "art/qa/weapons/weapon_first_arming_sword_right_idle.png",
+    "art/qa/weapons/weapon_first_arming_sword_left_idle.png",
+    "art/qa/weapons/weapon_first_arming_sword_right_swing.png",
+    "art/qa/weapons/weapon_first_arming_sword_left_swing.png",
+    "art/qa/weapons/weapon_first_longsword_right_idle.png",
+    "art/qa/weapons/weapon_first_longsword_left_idle.png",
+    "art/qa/weapons/weapon_first_longsword_right_swing.png",
+    "art/qa/weapons/weapon_first_longsword_left_swing.png",
+    "art/qa/weapons/weapon_first_mace_right_idle.png",
+    "art/qa/weapons/weapon_first_mace_left_idle.png",
+    "art/qa/weapons/weapon_first_mace_right_swing.png",
+    "art/qa/weapons/weapon_first_mace_left_swing.png",
+    "art/qa/weapons/weapon_first_spear_right_idle.png",
+    "art/qa/weapons/weapon_first_spear_left_idle.png",
+    "art/qa/weapons/weapon_first_spear_right_swing.png",
+    "art/qa/weapons/weapon_first_spear_left_swing.png",
+    "art/qa/weapons/weapon_first_katana_right_idle.png",
+    "art/qa/weapons/weapon_first_katana_left_idle.png",
+    "art/qa/weapons/weapon_first_katana_right_swing.png",
+    "art/qa/weapons/weapon_first_katana_left_swing.png",
+    "art/qa/weapons/weapon_first_dagger_right_idle.png",
+    "art/qa/weapons/weapon_first_dagger_left_idle.png",
+    "art/qa/weapons/weapon_first_dagger_right_swing.png",
+    "art/qa/weapons/weapon_first_dagger_left_swing.png",
+    "art/qa/weapons/weapon_first_morningstar_right_idle.png",
+    "art/qa/weapons/weapon_first_morningstar_left_idle.png",
+    "art/qa/weapons/weapon_first_morningstar_right_swing.png",
+    "art/qa/weapons/weapon_first_morningstar_left_swing.png",
+    "art/qa/weapons/weapon_first_battleaxe_right_idle.png",
+    "art/qa/weapons/weapon_first_battleaxe_left_idle.png",
+    "art/qa/weapons/weapon_first_battleaxe_right_swing.png",
+    "art/qa/weapons/weapon_first_battleaxe_left_swing.png",
+    "art/qa/weapons/weapon_first_halberd_right_idle.png",
+    "art/qa/weapons/weapon_first_halberd_left_idle.png",
+    "art/qa/weapons/weapon_first_halberd_right_swing.png",
+    "art/qa/weapons/weapon_first_halberd_left_swing.png",
+    "art/qa/weapons/weapon_first_war_hammer_right_idle.png",
+    "art/qa/weapons/weapon_first_war_hammer_left_idle.png",
+    "art/qa/weapons/weapon_first_war_hammer_right_swing.png",
+    "art/qa/weapons/weapon_first_war_hammer_left_swing.png",
+    "art/qa/weapons/weapon_first_rapier_right_idle.png",
+    "art/qa/weapons/weapon_first_rapier_left_idle.png",
+    "art/qa/weapons/weapon_first_rapier_right_swing.png",
+    "art/qa/weapons/weapon_first_rapier_left_swing.png",
+    "art/qa/weapons/weapon_first_sabre_right_idle.png",
+    "art/qa/weapons/weapon_first_sabre_left_idle.png",
+    "art/qa/weapons/weapon_first_sabre_right_swing.png",
+    "art/qa/weapons/weapon_first_sabre_left_swing.png",
+    "art/qa/weapons/weapon_first_gladius_right_idle.png",
+    "art/qa/weapons/weapon_first_gladius_left_idle.png",
+    "art/qa/weapons/weapon_first_gladius_right_swing.png",
+    "art/qa/weapons/weapon_first_gladius_left_swing.png",
+    "art/qa/weapons/weapon_first_kukri_right_idle.png",
+    "art/qa/weapons/weapon_first_kukri_left_idle.png",
+    "art/qa/weapons/weapon_first_kukri_right_swing.png",
+    "art/qa/weapons/weapon_first_kukri_left_swing.png",
+    "art/qa/weapons/weapon_first_katar_right_idle.png",
+    "art/qa/weapons/weapon_first_katar_left_idle.png",
+    "art/qa/weapons/weapon_first_katar_right_swing.png",
+    "art/qa/weapons/weapon_first_katar_left_swing.png",
+    "art/qa/weapons/weapon_first_naginata_right_idle.png",
+    "art/qa/weapons/weapon_first_naginata_left_idle.png",
+    "art/qa/weapons/weapon_first_naginata_right_swing.png",
+    "art/qa/weapons/weapon_first_naginata_left_swing.png",
+    "art/qa/weapons/weapon_first_pike_right_idle.png",
+    "art/qa/weapons/weapon_first_pike_left_idle.png",
+    "art/qa/weapons/weapon_first_pike_right_swing.png",
+    "art/qa/weapons/weapon_first_pike_left_swing.png",
+    "art/qa/weapons/weapon_first_flail_right_idle.png",
+    "art/qa/weapons/weapon_first_flail_left_idle.png",
+    "art/qa/weapons/weapon_first_flail_right_swing.png",
+    "art/qa/weapons/weapon_first_flail_left_swing.png"
+  ],
+  "geometry_audit": {
+    "status": "passed",
+    "weapons": 180,
+    "shape_models": 18,
+    "exterior_faces": 5301,
+    "closed_manifold_shells": true,
+    "uv_overlap": false,
+    "opaque_uv_regions": true,
+    "grip": [
+      8,
+      8,
+      8
+    ],
+    "left_hand": "engine_mirrored",
+    "inventory": "same_3d_geometry_as_held_model",
+    "per_shape": {
+      "arming_sword": {
+        "exterior_faces": 332,
+        "closed_shell": true
+      },
+      "longsword": {
+        "exterior_faces": 452,
+        "closed_shell": true
+      },
+      "mace": {
+        "exterior_faces": 316,
+        "closed_shell": true
+      },
+      "spear": {
+        "exterior_faces": 315,
+        "closed_shell": true
+      },
+      "katana": {
+        "exterior_faces": 233,
+        "closed_shell": true
+      },
+      "dagger": {
+        "exterior_faces": 280,
+        "closed_shell": true
+      },
+      "morningstar": {
+        "exterior_faces": 238,
+        "closed_shell": true
+      },
+      "battleaxe": {
+        "exterior_faces": 354,
+        "closed_shell": true
+      },
+      "halberd": {
+        "exterior_faces": 384,
+        "closed_shell": true
+      },
+      "war_hammer": {
+        "exterior_faces": 244,
+        "closed_shell": true
+      },
+      "rapier": {
+        "exterior_faces": 244,
+        "closed_shell": true
+      },
+      "sabre": {
+        "exterior_faces": 294,
+        "closed_shell": true
+      },
+      "gladius": {
+        "exterior_faces": 346,
+        "closed_shell": true
+      },
+      "kukri": {
+        "exterior_faces": 287,
+        "closed_shell": true
+      },
+      "katar": {
+        "exterior_faces": 154,
+        "closed_shell": true
+      },
+      "naginata": {
+        "exterior_faces": 259,
+        "closed_shell": true
+      },
+      "pike": {
+        "exterior_faces": 222,
+        "closed_shell": true
+      },
+      "flail": {
+        "exterior_faces": 347,
+        "closed_shell": true
+      }
+    }
+  },
+  "build": "passed",
+  "server_required_tests": {
+    "passed": 14,
+    "failed": 0
+  },
+  "art_revision": "Fantasy Reforged final",
+  "client_log": "epoch-weapon-final.log",
+  "screenshots_verified_current_run": true
+}

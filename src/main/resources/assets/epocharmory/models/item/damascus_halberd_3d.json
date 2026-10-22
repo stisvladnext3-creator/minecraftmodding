@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/halberd",
+  "textures": {
+    "surface": "epocharmory:item/weapons/damascus_halberd",
+    "particle": "epocharmory:block/damascus_metal"
+  }
+}

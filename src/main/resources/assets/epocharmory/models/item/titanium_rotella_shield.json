@@ -1,0 +1,23 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "textures": {
+    "particle": "epocharmory:item/shields/titanium_edge"
+  },
+  "base": {
+    "parent": "epocharmory:item/titanium_rotella_shield_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "epocharmory:item/titanium_rotella_shield_icon"
+    }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "epocharmory:item/titanium_rotella_shield_blocking"
+    }
+  ]
+}

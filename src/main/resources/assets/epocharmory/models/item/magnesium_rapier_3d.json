@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/rapier",
+  "textures": {
+    "surface": "epocharmory:item/weapons/magnesium_rapier",
+    "particle": "epocharmory:block/magnesium_metal"
+  }
+}

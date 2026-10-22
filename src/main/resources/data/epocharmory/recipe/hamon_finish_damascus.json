@@ -1,0 +1,20 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "grindstone_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:tempered_hamon_damascus_blade",
+      "count": 1
+    },
+    {
+      "item": "minecraft:flint",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:hamon_damascus_blade",
+    "count": 1
+  },
+  "time": 80,
+  "tool": "epocharmory:tongs"
+}

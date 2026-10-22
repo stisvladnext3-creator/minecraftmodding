@@ -1,0 +1,11 @@
+{
+  "source_baseline": "EpochArmory-1.0.4-NeoForge-1.21.1-source.zip",
+  "unchanged_gameplay_data_language_files": 809,
+  "changed_java_files": [
+    "src/main/java/ru/epocharmory/test/ArmorVisualProbe.java",
+    "src/main/java/ru/epocharmory/test/ShieldVisualProbe.java",
+    "src/main/java/ru/epocharmory/test/WeaponVisualProbe.java"
+  ],
+  "java_changes": "visual probe captions only",
+  "item_ids_recipes_combat": "unchanged"
+}

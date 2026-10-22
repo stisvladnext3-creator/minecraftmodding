@@ -1,0 +1,14 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "textures": {
+    "particle": "epocharmory:block/diamond_metal"
+  },
+  "base": {
+    "parent": "epocharmory:item/diamond_spear_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "epocharmory:item/diamond_spear_icon"
+    }
+  }
+}

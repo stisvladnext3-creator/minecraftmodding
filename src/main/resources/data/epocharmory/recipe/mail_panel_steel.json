@@ -1,0 +1,20 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "riveting_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:steel_rings",
+      "count": 8
+    },
+    {
+      "item": "epocharmory:steel_rivets",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "epocharmory:steel_mail_panel",
+    "count": 1
+  },
+  "time": 120,
+  "tool": "epocharmory:rivet_punch"
+}

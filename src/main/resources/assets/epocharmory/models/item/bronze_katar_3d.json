@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/katar",
+  "textures": {
+    "surface": "epocharmory:item/weapons/bronze_katar",
+    "particle": "epocharmory:block/bronze_metal"
+  }
+}

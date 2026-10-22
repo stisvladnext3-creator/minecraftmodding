@@ -1,0 +1,10 @@
+{
+  "parent": "epocharmory:item/shields/kite",
+  "textures": {
+    "front": "epocharmory:item/iron_kite_shield",
+    "back": "epocharmory:item/shields/back",
+    "metal": "epocharmory:item/shields/iron_edge",
+    "leather": "epocharmory:item/shields/leather",
+    "particle": "epocharmory:item/shields/iron_edge"
+  }
+}

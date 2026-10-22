@@ -1,0 +1,16 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "wire_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_titanium_plate",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:titanium_rivets",
+    "count": 16
+  },
+  "time": 40,
+  "tool": "epocharmory:metal_shears"
+}

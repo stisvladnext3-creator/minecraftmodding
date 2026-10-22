@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/naginata",
+  "textures": {
+    "surface": "epocharmory:item/weapons/damascus_naginata",
+    "particle": "epocharmory:block/damascus_metal"
+  }
+}

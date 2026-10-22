@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/kukri",
+  "textures": {
+    "surface": "epocharmory:item/weapons/diamond_kukri",
+    "particle": "epocharmory:block/diamond_metal"
+  }
+}

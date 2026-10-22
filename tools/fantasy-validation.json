@@ -1,0 +1,29 @@
+{
+  "mod": "1.1.0",
+  "art": "Fantasy Reforged",
+  "build": "passed",
+  "server_gametests": {
+    "passed": 14,
+    "failed": 0
+  },
+  "static_checks": [
+    "validate_armor.py",
+    "validate_weapons.py",
+    "validate_shields.py",
+    "validate_resources.py"
+  ],
+  "runtime_success": [
+    "EPOCH_ARMOR_SUCCESS",
+    "EPOCH_SHIELD_SUCCESS",
+    "EPOCH_WEAPON_SUCCESS"
+  ],
+  "current_client_screenshots": {
+    "armor": 9,
+    "shields": 49,
+    "weapons": 83
+  },
+  "art_fingerprint": "cb88a3b1675e1e313a23e4ccff34effbbc0249a83f0abb1d8b7f118eeaf16f66",
+  "online_authentication": "not_required_or_validated",
+  "rendering_backend": "Minecraft client / Mesa software OpenGL / Xorg dummy",
+  "third_party_mods_and_shaders": "not_tested"
+}

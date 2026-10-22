@@ -1,0 +1,20 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "riveting_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_steel_plate",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:steel_lamellae",
+    "count": 4
+  },
+  "time": 60,
+  "tool": "epocharmory:rivet_punch"
+}

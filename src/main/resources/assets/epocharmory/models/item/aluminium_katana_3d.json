@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/katana",
+  "textures": {
+    "surface": "epocharmory:item/weapons/aluminium_katana",
+    "particle": "epocharmory:block/aluminium_metal"
+  }
+}

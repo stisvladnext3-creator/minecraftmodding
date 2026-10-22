@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT (code); generated artwork included for use with this mod"
+[[mods]]
+modId="epocharmory"
+version="1.1.0"
+displayName="Epoch Armory — Кузница эпох"
+authors="Nika & Codex"
+description='''Историческая кузница: 18 видов оружия, 10 форм щитов, кольчуги, ламелляры, бригантины и латы. Ковка, клёпка, закалка, отпуск и поздние сплавы.'''
+[[dependencies.epocharmory]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.262,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.epocharmory]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="NONE"
+side="BOTH"

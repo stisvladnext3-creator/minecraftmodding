@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/battleaxe",
+  "textures": {
+    "surface": "epocharmory:item/weapons/netherite_battleaxe",
+    "particle": "epocharmory:block/netherite_metal"
+  }
+}

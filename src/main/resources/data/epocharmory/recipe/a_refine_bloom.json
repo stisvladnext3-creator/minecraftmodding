@@ -1,0 +1,16 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forging_anvil",
+  "inputs": [
+    {
+      "item": "epocharmory:iron_bloom",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "minecraft:iron_ingot",
+    "count": 1
+  },
+  "time": 60,
+  "tool": "epocharmory:smith_hammer"
+}

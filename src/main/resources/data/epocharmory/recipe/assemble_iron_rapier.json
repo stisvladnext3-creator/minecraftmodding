@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_iron_long_blade",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:wooden_shaft",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:iron_rivets",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "epocharmory:iron_rapier",
+    "count": 1
+  },
+  "time": 160,
+  "tool": "epocharmory:smith_hammer"
+}

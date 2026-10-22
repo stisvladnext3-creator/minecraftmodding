@@ -1,0 +1,16 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "wire_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:damascus_wire",
+      "count": 4
+    }
+  ],
+  "result": {
+    "id": "epocharmory:damascus_rings",
+    "count": 16
+  },
+  "time": 60,
+  "tool": "epocharmory:metal_shears"
+}

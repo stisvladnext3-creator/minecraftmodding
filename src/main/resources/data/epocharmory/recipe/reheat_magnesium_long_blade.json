@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forge",
+  "inputs": [
+    {
+      "item": "epocharmory:hot_magnesium_long_blade",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:hot_magnesium_long_blade",
+    "count": 1
+  },
+  "time": 50,
+  "min_heat": 300,
+  "max_heat": 550
+}

@@ -1,0 +1,15 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "textures": {
+    "particle": "epocharmory:item/shields/titanium_edge"
+  },
+  "base": {
+    "parent": "epocharmory:item/titanium_buckler_shield_blocking_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "epocharmory:item/titanium_buckler_shield_icon"
+    }
+  }
+}

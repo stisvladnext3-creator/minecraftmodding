@@ -1,0 +1,10 @@
+{
+  "parent": "epocharmory:item/shields/aspis",
+  "textures": {
+    "front": "epocharmory:item/diamond_aspis_shield",
+    "back": "epocharmory:item/shields/back",
+    "metal": "epocharmory:item/shields/diamond_edge",
+    "leather": "epocharmory:item/shields/leather",
+    "particle": "epocharmory:item/shields/diamond_edge"
+  }
+}

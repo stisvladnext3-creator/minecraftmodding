@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:finished_gold_short_blade",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:wooden_shaft",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:gold_rivets",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "epocharmory:gold_gladius",
+    "count": 1
+  },
+  "time": 80,
+  "tool": "epocharmory:smith_hammer"
+}

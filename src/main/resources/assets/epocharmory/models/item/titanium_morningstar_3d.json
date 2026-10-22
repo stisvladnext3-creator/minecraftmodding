@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/morningstar",
+  "textures": {
+    "surface": "epocharmory:item/weapons/titanium_morningstar",
+    "particle": "epocharmory:block/titanium_metal"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forge",
+  "inputs": [
+    {
+      "item": "minecraft:gold_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:hot_gold_billet",
+    "count": 1
+  },
+  "time": 80,
+  "min_heat": 400,
+  "max_heat": 750
+}

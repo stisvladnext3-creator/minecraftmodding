@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/morningstar",
+  "textures": {
+    "surface": "epocharmory:item/weapons/damascus_morningstar",
+    "particle": "epocharmory:block/damascus_metal"
+  }
+}

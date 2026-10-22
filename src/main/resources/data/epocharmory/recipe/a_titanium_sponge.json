@@ -1,0 +1,25 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "electrolyzer",
+  "inputs": [
+    {
+      "item": "epocharmory:rutile",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:magnesium_ingot",
+      "count": 2
+    },
+    {
+      "item": "minecraft:quartz",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:titanium_sponge",
+    "count": 1
+  },
+  "time": 400,
+  "min_heat": 900,
+  "max_heat": 1200
+}

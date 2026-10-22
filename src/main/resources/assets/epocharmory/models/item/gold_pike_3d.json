@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/pike",
+  "textures": {
+    "surface": "epocharmory:item/weapons/gold_pike",
+    "particle": "epocharmory:block/gold_metal"
+  }
+}

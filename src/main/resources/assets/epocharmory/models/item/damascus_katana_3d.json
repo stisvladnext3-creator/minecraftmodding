@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/katana",
+  "textures": {
+    "surface": "epocharmory:item/weapons/damascus_katana",
+    "particle": "epocharmory:block/damascus_metal"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/katana",
+  "textures": {
+    "surface": "epocharmory:item/weapons/magnesium_katana",
+    "particle": "epocharmory:block/magnesium_metal"
+  }
+}

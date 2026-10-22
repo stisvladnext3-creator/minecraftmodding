@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forging_anvil",
+  "inputs": [
+    {
+      "item": "epocharmory:hot_steel_billet",
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "epocharmory:hot_steel_long_blade",
+    "count": 1
+  },
+  "time": 100,
+  "tool": "epocharmory:smith_hammer",
+  "hot": true
+}

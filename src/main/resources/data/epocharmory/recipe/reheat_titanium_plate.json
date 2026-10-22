@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forge",
+  "inputs": [
+    {
+      "item": "epocharmory:hot_titanium_plate",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:hot_titanium_plate",
+    "count": 1
+  },
+  "time": 50,
+  "min_heat": 850,
+  "max_heat": 1200
+}

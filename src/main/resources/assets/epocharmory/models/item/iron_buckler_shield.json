@@ -1,0 +1,23 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "textures": {
+    "particle": "epocharmory:item/shields/iron_edge"
+  },
+  "base": {
+    "parent": "epocharmory:item/iron_buckler_shield_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "epocharmory:item/iron_buckler_shield_icon"
+    }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "epocharmory:item/iron_buckler_shield_blocking"
+    }
+  ]
+}

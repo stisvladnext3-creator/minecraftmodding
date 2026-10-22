@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/battleaxe",
+  "textures": {
+    "surface": "epocharmory:item/weapons/aluminium_battleaxe",
+    "particle": "epocharmory:block/aluminium_metal"
+  }
+}

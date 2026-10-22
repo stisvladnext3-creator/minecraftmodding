@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forge",
+  "inputs": [
+    {
+      "item": "epocharmory:hot_iron_long_blade",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:hot_iron_long_blade",
+    "count": 1
+  },
+  "time": 50,
+  "min_heat": 750,
+  "max_heat": 1100
+}

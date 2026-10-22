@@ -1,0 +1,14 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "textures": {
+    "particle": "epocharmory:block/steel_metal"
+  },
+  "base": {
+    "parent": "epocharmory:item/steel_sabre_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "epocharmory:item/steel_sabre_icon"
+    }
+  }
+}

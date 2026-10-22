@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/war_hammer",
+  "textures": {
+    "surface": "epocharmory:item/weapons/steel_war_hammer",
+    "particle": "epocharmory:block/steel_metal"
+  }
+}

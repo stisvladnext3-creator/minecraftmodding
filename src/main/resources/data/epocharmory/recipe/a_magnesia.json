@@ -1,0 +1,25 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "crucible",
+  "inputs": [
+    {
+      "item": "epocharmory:dolomite",
+      "count": 3
+    },
+    {
+      "item": "epocharmory:flux",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:magnesia",
+    "count": 2
+  },
+  "time": 200,
+  "min_heat": 1000,
+  "max_heat": 1350,
+  "byproduct": {
+    "id": "epocharmory:slag",
+    "count": 1
+  }
+}

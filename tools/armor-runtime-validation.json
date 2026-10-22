@@ -1,0 +1,39 @@
+{
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.262",
+  "mod": "1.1.0",
+  "build": "passed",
+  "client_result": "EPOCH_ARMOR_SUCCESS",
+  "server_required_tests": {
+    "passed": 14,
+    "failed": 0
+  },
+  "resource_audit": "passed",
+  "armor_audit": {
+    "models": 16,
+    "equipment": 160,
+    "textures": 80,
+    "texture_size": 512,
+    "inventory_icon_size": 32,
+    "geometry": "faceted_fantasy_mesh",
+    "faces": 3750,
+    "uv_overlap": false,
+    "texture_blur": false,
+    "planar_quads": "passed",
+    "coplanar_same_facing_axis_aligned_polygons": "passed"
+  },
+  "screenshots": [
+    "art/qa/armor_plate.png",
+    "art/qa/armor_mail.png",
+    "art/qa/armor_lamellar.png",
+    "art/qa/armor_brigandine.png",
+    "art/qa/armor_materials.png",
+    "art/qa/armor_slots.png",
+    "art/qa/armor_poses.png",
+    "art/qa/armor_reload.png",
+    "art/qa/armor_inventory.png"
+  ],
+  "art_revision": "Fantasy Reforged final",
+  "client_log": "epoch-armor-final.log",
+  "screenshots_verified_current_run": true
+}

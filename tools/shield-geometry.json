@@ -1,0 +1,102 @@
+{
+  "buckler": {
+    "width": 10,
+    "height": 10,
+    "faces": 128,
+    "grip": [
+      8,
+      8,
+      8
+    ]
+  },
+  "round": {
+    "width": 14,
+    "height": 14,
+    "faces": 168,
+    "grip": [
+      8,
+      8,
+      8
+    ]
+  },
+  "kite": {
+    "width": 14,
+    "height": 22,
+    "faces": 188,
+    "grip": [
+      8,
+      8,
+      8
+    ]
+  },
+  "heater": {
+    "width": 14,
+    "height": 18,
+    "faces": 140,
+    "grip": [
+      8,
+      8,
+      8
+    ]
+  },
+  "scutum": {
+    "width": 14,
+    "height": 22,
+    "faces": 132,
+    "grip": [
+      8,
+      8,
+      8
+    ]
+  },
+  "aspis": {
+    "width": 16,
+    "height": 16,
+    "faces": 168,
+    "grip": [
+      8,
+      8,
+      8
+    ]
+  },
+  "pavise": {
+    "width": 16,
+    "height": 24,
+    "faces": 95,
+    "grip": [
+      8,
+      8,
+      8
+    ]
+  },
+  "kalkan": {
+    "width": 14,
+    "height": 14,
+    "faces": 168,
+    "grip": [
+      8,
+      8,
+      8
+    ]
+  },
+  "targe": {
+    "width": 14,
+    "height": 20,
+    "faces": 108,
+    "grip": [
+      8,
+      8,
+      8
+    ]
+  },
+  "rotella": {
+    "width": 14,
+    "height": 16,
+    "faces": 168,
+    "grip": [
+      8,
+      8,
+      8
+    ]
+  }
+}

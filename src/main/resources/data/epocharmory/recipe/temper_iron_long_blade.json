@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "tempering_furnace",
+  "inputs": [
+    {
+      "item": "epocharmory:quenched_iron_long_blade",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:tempered_iron_long_blade",
+    "count": 1
+  },
+  "time": 100,
+  "min_heat": 450,
+  "max_heat": 650
+}

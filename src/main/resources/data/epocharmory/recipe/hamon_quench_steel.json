@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "quench_tub",
+  "inputs": [
+    {
+      "item": "epocharmory:hot_steel_long_blade",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:clay_slurry",
+      "count": 1
+    },
+    {
+      "item": "minecraft:water_bucket",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:clay_hardened_steel_blade",
+    "count": 1
+  },
+  "time": 100,
+  "hot": true,
+  "byproduct": {
+    "id": "minecraft:bucket",
+    "count": 1
+  }
+}

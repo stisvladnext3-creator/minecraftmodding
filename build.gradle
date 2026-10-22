@@ -1,0 +1,58 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+group = 'ru.epocharmory'
+version = "${mod_version}+mc1.21.1"
+base.archivesName = 'epocharmory'
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.withSourcesJar()
+neoForge {
+    version = project.neo_version
+    runs {
+        client { client() }
+        server { server(); programArgument '--nogui' }
+        gameTestServer {
+            type = 'gameTestServer'
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'epocharmory'
+        }
+        clientSmoke {
+            client()
+            systemProperty 'epocharmory.smoke', 'true'
+            programArguments.addAll '--quickPlaySingleplayer', 'epocharmory-qa', '--width', '1280', '--height', '800'
+        }
+        armorSmoke {
+            client()
+            systemProperty 'epocharmory.armorSmoke', 'true'
+            programArguments.addAll '--quickPlaySingleplayer', 'epocharmory-qa', '--width', '1280', '--height', '800'
+        }
+        shieldSmoke {
+            client()
+            systemProperty 'epocharmory.shieldSmoke', 'true'
+            programArguments.addAll '--quickPlaySingleplayer', 'epocharmory-qa', '--width', '1280', '--height', '800'
+        }
+        weaponSmoke {
+            client()
+            systemProperty 'epocharmory.weaponSmoke', 'true'
+            programArguments.addAll '--quickPlaySingleplayer', 'epocharmory-qa', '--width', '1280', '--height', '800'
+        }
+        configureEach { logLevel = org.slf4j.event.Level.INFO }
+    }
+    mods { epocharmory { sourceSet sourceSets.main } }
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.named('jar') { exclude 'ru/epocharmory/test/**'; exclude 'data/epocharmory/structure/empty.*' }
+tasks.named('sourcesJar') { exclude 'ru/epocharmory/test/**' }
+tasks.matching { it.name in ['runClientSmoke','runArmorSmoke','runShieldSmoke','runWeaponSmoke'] }.configureEach {
+    doFirst {
+        def sourceWorld = file('run/world')
+        def targetWorld = file('run/saves/epocharmory-qa')
+        def marker = new File(targetWorld, '.epocharmory-generated')
+        if (!new File(sourceWorld, 'level.dat').isFile()) throw new GradleException('Run runGameTestServer first.')
+        if (targetWorld.exists() && !marker.exists()) throw new GradleException('Refusing to overwrite a world not created by this test.')
+        targetWorld.mkdirs()
+        marker.text = 'Generated development world for Epoch Armory.\n'
+        copy { from sourceWorld; into targetWorld; exclude 'session.lock' }
+        file('run/options.txt').text = 'onboardAccessibility:false\nguiScale:2\nlang:ru_ru\nrenderDistance:5\nsimulationDistance:5\nmaxFps:60\nvsync:false\npauseOnLostFocus:false\ntutorialStep:none\n'
+    }
+}

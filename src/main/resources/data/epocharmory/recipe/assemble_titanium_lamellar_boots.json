@@ -1,0 +1,28 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "armorer_bench",
+  "inputs": [
+    {
+      "item": "epocharmory:titanium_lamellae",
+      "count": 6
+    },
+    {
+      "item": "epocharmory:padded_lining",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:leather_strap",
+      "count": 2
+    },
+    {
+      "item": "epocharmory:titanium_rivets",
+      "count": 8
+    }
+  ],
+  "result": {
+    "id": "epocharmory:titanium_lamellar_boots",
+    "count": 1
+  },
+  "time": 100,
+  "tool": "epocharmory:rivet_punch"
+}

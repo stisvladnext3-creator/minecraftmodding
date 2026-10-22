@@ -1,0 +1,21 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "electrolyzer",
+  "inputs": [
+    {
+      "item": "epocharmory:alumina",
+      "count": 3
+    },
+    {
+      "item": "minecraft:copper_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:aluminium_ingot",
+    "count": 3
+  },
+  "time": 300,
+  "min_heat": 850,
+  "max_heat": 1100
+}

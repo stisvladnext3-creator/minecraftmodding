@@ -1,0 +1,7 @@
+{
+  "parent": "epocharmory:item/weapons/battleaxe",
+  "textures": {
+    "surface": "epocharmory:item/weapons/magnesium_battleaxe",
+    "particle": "epocharmory:block/magnesium_metal"
+  }
+}

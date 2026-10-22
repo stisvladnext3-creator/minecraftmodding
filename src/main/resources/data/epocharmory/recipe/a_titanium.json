@@ -1,0 +1,21 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "crucible",
+  "inputs": [
+    {
+      "item": "epocharmory:titanium_sponge",
+      "count": 1
+    },
+    {
+      "item": "epocharmory:aluminium_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:titanium_ingot",
+    "count": 2
+  },
+  "time": 320,
+  "min_heat": 1150,
+  "max_heat": 1400
+}

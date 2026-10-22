@@ -1,0 +1,21 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "electrolyzer",
+  "inputs": [
+    {
+      "item": "epocharmory:magnesia",
+      "count": 3
+    },
+    {
+      "item": "epocharmory:aluminium_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:magnesium_ingot",
+    "count": 3
+  },
+  "time": 300,
+  "min_heat": 850,
+  "max_heat": 1100
+}

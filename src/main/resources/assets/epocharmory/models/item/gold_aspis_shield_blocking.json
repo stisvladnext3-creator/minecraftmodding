@@ -1,0 +1,15 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "textures": {
+    "particle": "epocharmory:item/shields/gold_edge"
+  },
+  "base": {
+    "parent": "epocharmory:item/gold_aspis_shield_blocking_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "epocharmory:item/gold_aspis_shield_icon"
+    }
+  }
+}

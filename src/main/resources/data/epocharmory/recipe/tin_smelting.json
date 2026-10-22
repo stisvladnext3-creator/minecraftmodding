@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "epocharmory:raw_tin"
+  },
+  "result": {
+    "id": "epocharmory:tin_ingot",
+    "count": 1
+  },
+  "experience": 0.5,
+  "cookingtime": 200
+}

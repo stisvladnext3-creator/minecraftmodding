@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "LGL",
+    "P P"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:smooth_stone_slab"
+    },
+    "L": {
+      "item": "minecraft:stick"
+    },
+    "G": {
+      "item": "minecraft:grindstone"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "id": "epocharmory:grindstone_bench",
+    "count": 1
+  }
+}

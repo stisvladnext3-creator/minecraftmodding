@@ -1,0 +1,10 @@
+{
+  "parent": "epocharmory:item/shields/scutum",
+  "textures": {
+    "front": "epocharmory:item/steel_scutum_shield",
+    "back": "epocharmory:item/shields/back",
+    "metal": "epocharmory:item/shields/steel_edge",
+    "leather": "epocharmory:item/shields/leather",
+    "particle": "epocharmory:item/shields/steel_edge"
+  }
+}

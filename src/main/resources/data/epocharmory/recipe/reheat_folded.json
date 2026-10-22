@@ -1,0 +1,17 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "forge",
+  "inputs": [
+    {
+      "item": "epocharmory:folded_billet",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:folded_billet",
+    "count": 1
+  },
+  "time": 60,
+  "min_heat": 1050,
+  "max_heat": 1350
+}

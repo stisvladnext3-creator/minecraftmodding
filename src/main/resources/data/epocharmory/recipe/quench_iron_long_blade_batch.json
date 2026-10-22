@@ -1,0 +1,24 @@
+{
+  "type": "epocharmory:workshop",
+  "station": "quench_tub",
+  "inputs": [
+    {
+      "item": "epocharmory:hot_iron_long_blade",
+      "count": 4
+    },
+    {
+      "item": "minecraft:water_bucket",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "epocharmory:quenched_iron_long_blade",
+    "count": 4
+  },
+  "time": 80,
+  "hot": true,
+  "byproduct": {
+    "id": "minecraft:bucket",
+    "count": 1
+  }
+}
