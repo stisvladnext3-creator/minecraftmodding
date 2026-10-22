@@ -85,7 +85,7 @@ public final class ArmorVisualProbe {
     }
     private static final class Sheet extends Screen {
         final String mode;int frames;final List<RemotePlayer> players=new ArrayList<>();
-        Sheet(String mode){super(Component.literal("Epoch Armory · Fantasy Reforged 1.1.0 · броня"));this.mode=mode;}
+        Sheet(String mode){super(Component.literal("Epoch Armory · Fantasy Reforged 1.1.1 · броня"));this.mode=mode;}
         @Override protected void init(){
             players.clear();frames=0;
             if(mode.equals("materials"))for(var metal:Metal.values())players.add(player("plate",metal.key,null,false,false));

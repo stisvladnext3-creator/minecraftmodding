@@ -1,29 +1,36 @@
 {
-  "mod": "1.1.0",
-  "art": "Fantasy Reforged",
+  "mod": "1.1.1",
   "build": "passed",
   "server_gametests": {
-    "passed": 14,
+    "passed": 17,
     "failed": 0
   },
   "static_checks": [
     "validate_armor.py",
     "validate_weapons.py",
-    "validate_shields.py",
     "validate_resources.py"
   ],
   "runtime_success": [
     "EPOCH_ARMOR_SUCCESS",
-    "EPOCH_SHIELD_SUCCESS",
     "EPOCH_WEAPON_SUCCESS"
   ],
   "current_client_screenshots": {
     "armor": 9,
-    "shields": 49,
-    "weapons": 83
+    "weapons": 92
   },
-  "art_fingerprint": "cb88a3b1675e1e313a23e4ccff34effbbc0249a83f0abb1d8b7f118eeaf16f66",
-  "online_authentication": "not_required_or_validated",
-  "rendering_backend": "Minecraft client / Mesa software OpenGL / Xorg dummy",
+  "inherited_unchanged_checks": {
+    "shields": {
+      "version": "1.1.0",
+      "screenshots": 49,
+      "static_and_runtime": "passed; geometry/textures unchanged"
+    }
+  },
+  "vanilla_held_direction_checks": 720,
+  "longsword_two_handed_materials": 10,
+  "longsword_to_dagger_length_ratio": 3.75,
+  "item_ids_recipes_numeric_stats": "unchanged",
+  "longsword_rule": "empty offhand required; blocks player attacks and offhand use; two-handed first/third-person display",
+  "art_fingerprint": "059d00b8ac01e87e1de25365441afce3874dbbbec1702b6a002c8d5b406ba3a0",
+  "rendering_backend": "Minecraft / Mesa software OpenGL / Xorg dummy",
   "third_party_mods_and_shaders": "not_tested"
 }

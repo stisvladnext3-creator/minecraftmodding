@@ -707,5 +707,7 @@
   "screen.epocharmory.status.4": "Нужная температура / топливо",
   "screen.epocharmory.status.5": "Забери готовые предметы",
   "message.epocharmory.empty_inputs": "Сначала освободи входные ячейки станка.",
-  "message.epocharmory.missing_items": "В инвентаре не хватает материалов."
+  "message.epocharmory.missing_items": "В инвентаре не хватает материалов.",
+  "tooltip.epocharmory.longsword_hands": "Двуручный хват: вторая рука должна быть пустой",
+  "message.epocharmory.longsword_hands": "Для двуручного меча освободи вторую руку"
 }

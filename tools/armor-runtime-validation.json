@@ -1,11 +1,11 @@
 {
   "minecraft": "1.21.1",
   "neoforge": "21.1.262",
-  "mod": "1.1.0",
+  "mod": "1.1.1",
   "build": "passed",
   "client_result": "EPOCH_ARMOR_SUCCESS",
   "server_required_tests": {
-    "passed": 14,
+    "passed": 17,
     "failed": 0
   },
   "resource_audit": "passed",
@@ -16,24 +16,24 @@
     "texture_size": 512,
     "inventory_icon_size": 32,
     "geometry": "faceted_fantasy_mesh",
-    "faces": 3750,
+    "faces": 3737,
     "uv_overlap": false,
     "texture_blur": false,
     "planar_quads": "passed",
     "coplanar_same_facing_axis_aligned_polygons": "passed"
   },
   "screenshots": [
-    "art/qa/armor_plate.png",
-    "art/qa/armor_mail.png",
-    "art/qa/armor_lamellar.png",
     "art/qa/armor_brigandine.png",
+    "art/qa/armor_inventory.png",
+    "art/qa/armor_lamellar.png",
+    "art/qa/armor_mail.png",
     "art/qa/armor_materials.png",
-    "art/qa/armor_slots.png",
+    "art/qa/armor_plate.png",
     "art/qa/armor_poses.png",
     "art/qa/armor_reload.png",
-    "art/qa/armor_inventory.png"
+    "art/qa/armor_slots.png"
   ],
-  "art_revision": "Fantasy Reforged final",
-  "client_log": "epoch-armor-final.log",
+  "art_revision": "1.1.1 forehead, vanilla alignment, sizes and two-handed longsword",
+  "client_log": "epoch-111-armor-client.log",
   "screenshots_verified_current_run": true
 }

@@ -34,7 +34,8 @@ public final class HistoricalWeapon extends SwordItem {
         lines.add(Component.translatable("tooltip.epocharmory.reach",kind.reach).withStyle(ChatFormatting.GRAY));
         lines.add(Component.translatable("tooltip.epocharmory.penetration",Math.round(kind.penetration*100)).withStyle(ChatFormatting.AQUA));
         lines.add(Component.translatable("tooltip.epocharmory.type."+kind.damageType).withStyle(ChatFormatting.GRAY));
-        if(kind.twoHanded) lines.add(Component.translatable("tooltip.epocharmory.two_handed").withStyle(ChatFormatting.GOLD));
+        if(kind==WeaponKind.LONGSWORD) lines.add(Component.translatable("tooltip.epocharmory.longsword_hands").withStyle(ChatFormatting.GOLD));
+        else if(kind.twoHanded) lines.add(Component.translatable("tooltip.epocharmory.two_handed").withStyle(ChatFormatting.GOLD));
         if(kind==WeaponKind.DAGGER || kind==WeaponKind.KATAR)lines.add(Component.translatable("tooltip.epocharmory.backstab").withStyle(ChatFormatting.DARK_PURPLE));
         if(kind==WeaponKind.BATTLEAXE||kind==WeaponKind.HALBERD)lines.add(Component.translatable("tooltip.epocharmory.shield_break").withStyle(ChatFormatting.GOLD));
     }

@@ -707,5 +707,7 @@
   "screen.epocharmory.status.4": "Нужная температура / топливо",
   "screen.epocharmory.status.5": "Забери готовые предметы",
   "message.epocharmory.empty_inputs": "Сначала освободи входные ячейки станка.",
-  "message.epocharmory.missing_items": "В инвентаре не хватает материалов."
+  "message.epocharmory.missing_items": "В инвентаре не хватает материалов.",
+  "tooltip.epocharmory.longsword_hands": "Two-handed grip: your offhand must be empty",
+  "message.epocharmory.longsword_hands": "Empty your offhand to use the two-handed sword"
 }

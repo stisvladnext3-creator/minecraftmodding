@@ -45,7 +45,7 @@ def weapon_mesh(kind):
     return mesh
 
 
-def render(mesh,texture,width=256,height=384,yaw=-22,pitch=5):
+def render(mesh,texture,width=256,height=384,yaw=-22,pitch=5,fixed_span=None):
     ay,ax=map(math.radians,(yaw,pitch))
     ry=np.array([[math.cos(ay),0,math.sin(ay)],[0,1,0],[-math.sin(ay),0,math.cos(ay)]])
     rx=np.array([[1,0,0],[0,math.cos(ax),-math.sin(ax)],[0,math.sin(ax),math.cos(ax)]])
@@ -54,6 +54,7 @@ def render(mesh,texture,width=256,height=384,yaw=-22,pitch=5):
     pts=np.concatenate([p for p,_ in transformed])
     lo,hi=pts.min(axis=0),pts.max(axis=0)
     scale=min((width-12)/(hi[0]-lo[0]),(height-12)/(hi[1]-lo[1]))
+    if fixed_span is not None:scale=min((width-12)/24,(height-12)/fixed_span)
     centre=(lo+hi)/2
     out=np.zeros((height,width,4),dtype=np.uint8);depth=np.full((height,width),np.inf)
     tex=np.array(texture.convert('RGBA'));th,tw=tex.shape[:2]
@@ -125,14 +126,19 @@ def weapon_catalog():
             'Алебарда','Боевой молот','Рапира','Сабля','Гладиус','Кукри','Катар','Нагината','Пика','Кистень']
     sheet=Image.new('RGB',(1440,1040),(14,19,29));d=ImageDraw.Draw(sheet)
     d.text((40,25),'EPOCH ARMORY / 18 НОВЫХ ФОРМ ОРУЖИЯ',font=font(29),fill=(229,210,164))
-    d.text((42,72),'Точные модели и UV-текстуры из мода · технический рендер',font=font(18),fill=(142,163,185))
+    d.text((42,72),'Единый масштаб оружия в руке · технический рендер игровых моделей',font=font(18),fill=(142,163,185))
     for i,kind in enumerate(kinds):
         x=15+i%6*238;y=120+i//6*300
         d.rounded_rectangle((x,y,x+225,y+280),radius=12,fill=(22,29,42),outline=(43,57,77))
         tex=Image.open(ASSETS/'textures/item/weapons'/f'steel_{kind}.png')
-        image=render(weapon_mesh(kind),tex,205,230,yaw=-25,pitch=5)
+        model=json.loads((ASSETS/'models/item/weapons'/f'{kind}.json').read_text())
+        scale=model['display']['thirdperson_righthand']['scale'][0]
+        mesh=[(p*scale,uv) for p,uv in weapon_mesh(kind)]
+        image=render(mesh,tex,205,222,yaw=-25,pitch=5,fixed_span=46)
         sheet.paste(image,(x+10,y+8),image)
-        d.text((x+12,y+250),labels[i],font=font(17),fill=(214,224,235))
+        d.text((x+12,y+239),labels[i],font=font(17),fill=(214,224,235))
+        length=json.loads((ROOT/'tools/weapon-geometry.json').read_text())[kind]['held_length']/16
+        d.text((x+12,y+261),f'{length:.2f} блока',font=font(13),fill=(142,163,185))
     sheet.save(ART/'weapon_catalog.png')
 
 

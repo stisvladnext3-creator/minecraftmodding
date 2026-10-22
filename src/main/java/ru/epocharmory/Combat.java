@@ -6,18 +6,40 @@ import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.*;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
 import net.minecraft.world.effect.*;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.entity.living.*;
 import net.neoforged.neoforge.common.damagesource.DamageContainer;
+import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 public final class Combat {
+    public static boolean holdsLongsword(LivingEntity entity){return entity.getMainHandItem().getItem() instanceof HistoricalWeapon w&&w.kind==WeaponKind.LONGSWORD;}
+    public static boolean readyLongsword(LivingEntity entity){return holdsLongsword(entity)&&entity.getOffhandItem().isEmpty();}
+    @SubscribeEvent public static void attack(AttackEntityEvent event){
+        var p=event.getEntity();
+        if(holdsLongsword(p)&&!p.getOffhandItem().isEmpty()){
+            event.setCanceled(true);
+            if(p.level().isClientSide)p.displayClientMessage(Component.translatable("message.epocharmory.longsword_hands").withStyle(ChatFormatting.RED),true);
+        }
+    }
+    private static boolean occupiedOffhand(Player p,InteractionHand hand){return holdsLongsword(p)&&hand==InteractionHand.OFF_HAND;}
+    @SubscribeEvent public static void offhandItem(PlayerInteractEvent.RightClickItem e){if(occupiedOffhand(e.getEntity(),e.getHand())){e.setCanceled(true);e.setCancellationResult(InteractionResult.FAIL);}}
+    @SubscribeEvent public static void offhandBlock(PlayerInteractEvent.RightClickBlock e){if(occupiedOffhand(e.getEntity(),e.getHand())){e.setCanceled(true);e.setCancellationResult(InteractionResult.FAIL);}}
+    @SubscribeEvent public static void offhandEntity(PlayerInteractEvent.EntityInteract e){if(occupiedOffhand(e.getEntity(),e.getHand())){e.setCanceled(true);e.setCancellationResult(InteractionResult.FAIL);}}
+    @SubscribeEvent public static void offhandSpecific(PlayerInteractEvent.EntityInteractSpecific e){if(occupiedOffhand(e.getEntity(),e.getHand())){e.setCanceled(true);e.setCancellationResult(InteractionResult.FAIL);}}
+    @SubscribeEvent public static void offhandUse(LivingEntityUseItemEvent.Start e){if(holdsLongsword(e.getEntity())&&e.getItem()==e.getEntity().getOffhandItem())e.setCanceled(true);}
     private static final ResourceLocation WEIGHT=EpochArmory.id("equipment_weight"),TWO_DAMAGE=EpochArmory.id("two_handed_damage"),TWO_SPEED=EpochArmory.id("two_handed_speed");
     public static int stamina(Player p){return p.getPersistentData().contains("epoch_stamina")?p.getPersistentData().getInt("epoch_stamina"):100;}
     public static void stamina(Player p,int value){p.getPersistentData().putInt("epoch_stamina",Math.max(0,Math.min(100,value)));}
     @SubscribeEvent public static void tick(PlayerTickEvent.Post event){
         if(!(event.getEntity() instanceof ServerPlayer p))return;
+        if(holdsLongsword(p)&&p.isUsingItem()&&p.getUsedItemHand()==InteractionHand.OFF_HAND)p.stopUsingItem();
         float penalty=0;
         for(var stack:p.getArmorSlots())if(stack.getItem() instanceof HistoricalArmor armor)penalty+=armor.weightPenalty();
         if(p.getUseItem().getItem() instanceof HistoricalShield shield)penalty+=shield.kind.slowdown*shield.metal.weight;
@@ -36,6 +58,8 @@ public final class Combat {
     }
     @SubscribeEvent public static void incoming(LivingIncomingDamageEvent event){
         if(event.getSource().getDirectEntity() instanceof LivingEntity attacker&&attacker.getMainHandItem().getItem() instanceof HistoricalWeapon weapon){
+            // Also guard damage entry points that bypass Player.attack/events.
+            if(weapon.kind==WeaponKind.LONGSWORD&&!attacker.getOffhandItem().isEmpty()&&event.getSource().is(net.minecraft.world.damagesource.DamageTypes.PLAYER_ATTACK)) {event.setCanceled(true);return;}
             event.addReductionModifier(DamageContainer.Reduction.ARMOR,(container,reduction)->reduction*(1-weapon.kind.penetration));
             LivingEntity target=event.getEntity();
             if((weapon.kind==WeaponKind.DAGGER||weapon.kind==WeaponKind.KATAR)&&target.getLookAngle().dot(attacker.position().subtract(target.position()).normalize())<-.3)
@@ -62,6 +86,8 @@ public final class Combat {
     @SubscribeEvent public static void shield(LivingShieldBlockEvent event){
         if(!event.getOriginalBlock())return;
         LivingEntity blocker=event.getEntity();
+        // Applies to vanilla shields too, before the custom-shield branch.
+        if(holdsLongsword(blocker)){event.setBlocked(false);return;}
         var attacker=event.getDamageSource().getDirectEntity() instanceof LivingEntity living?living:null;
         boolean flail=attacker!=null&&attacker.getMainHandItem().getItem() instanceof HistoricalWeapon w&&w.kind==WeaponKind.FLAIL;
         if(!(blocker.getUseItem().getItem() instanceof HistoricalShield shield)){

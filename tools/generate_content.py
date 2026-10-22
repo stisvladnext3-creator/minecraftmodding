@@ -171,7 +171,7 @@ put(Path('data/minecraft/tags/item/piglin_loved.json'),{'replace':False,'values'
 UI={
  'tab.epocharmory.weapons':'Кузница эпох · Оружие','tab.epocharmory.armor':'Кузница эпох · Доспехи и щиты','tab.epocharmory.workshop':'Кузница эпох · Мастерская',
  'tooltip.epocharmory.reach':'Дальность: %s блока','tooltip.epocharmory.penetration':'Пробитие брони: %s%%','tooltip.epocharmory.type.slash':'Рубящее оружие','tooltip.epocharmory.type.pierce':'Колющее оружие','tooltip.epocharmory.type.blunt':'Дробящее оружие',
- 'tooltip.epocharmory.two_handed':'Двуручное: освободи вторую руку','tooltip.epocharmory.backstab':'Удар со спины: +50%% урона','tooltip.epocharmory.shield_break':'Отключает щит противника','tooltip.epocharmory.shield_block':'Блок: ближний бой %s%% · снаряды %s%%',
+ 'tooltip.epocharmory.two_handed':'Двуручное: освободи вторую руку','tooltip.epocharmory.longsword_hands':'Двуручный хват: вторая рука должна быть пустой','message.epocharmory.longsword_hands':'Для двуручного меча освободи вторую руку','tooltip.epocharmory.backstab':'Удар со спины: +50%% урона','tooltip.epocharmory.shield_break':'Отключает щит противника','tooltip.epocharmory.shield_block':'Блок: ближний бой %s%% · снаряды %s%%',
  'tooltip.epocharmory.shield_stamina':'Стойкость: %s за удар · парирование %s с','tooltip.epocharmory.shield_slow':'Нагрузка при блоке: −%s%% скорости','tooltip.epocharmory.parry':'Ранний блок — полное парирование',
  'tooltip.epocharmory.style.mail':'Кольчуга: рубящие −12%%, дробящие +10%% при полном комплекте','tooltip.epocharmory.style.lamellar':'Ламелляр: снаряды −12%% при полном комплекте','tooltip.epocharmory.style.brigandine':'Бригантина: физический урон −6%% при полном комплекте','tooltip.epocharmory.style.plate':'Латы: рубящие −12%%, колющие −8%% при полном комплекте',
  'tooltip.epocharmory.piece_weight':'Нагрузка предмета: −%s%% скорости','tooltip.epocharmory.composite':'Композит на металлической основе','tooltip.epocharmory.hot_part':'Горячая деталь: рабочее окно 3 минуты','tooltip.epocharmory.reheat':'Остыло? Нагрей заново в горне.',
@@ -179,6 +179,7 @@ UI={
  'screen.epocharmory.status.0':'Готово к работе','screen.epocharmory.status.1':'Не хватает материалов','screen.epocharmory.status.2':'Нужен инструмент','screen.epocharmory.status.3':'Металл остыл — нужен горн','screen.epocharmory.status.4':'Нужная температура / топливо','screen.epocharmory.status.5':'Забери готовые предметы',
  'message.epocharmory.empty_inputs':'Сначала освободи входные ячейки станка.','message.epocharmory.missing_items':'В инвентаре не хватает материалов.'}
 LANG.update(UI);EN.update(UI)
+EN.update({'tooltip.epocharmory.longsword_hands':'Two-handed grip: your offhand must be empty','message.epocharmory.longsword_hands':'Empty your offhand to use the two-handed sword'})
 for k in ITEMS:simple_model(k)
 put(Path('assets')/NS/'lang/ru_ru.json',LANG);put(Path('assets')/NS/'lang/en_us.json',EN)
 put(Path('data')/NS/'advancement/recipes/root.json',{'criteria':{'has_ingot':{'trigger':'minecraft:inventory_changed','conditions':{'items':[{'items':'minecraft:iron_ingot'}]}}},'rewards':{'recipes':[rid(s) for s in STATIONS]+[rid(s) for s in ['smiths_codex','smith_hammer','tongs','rivet_punch','metal_shears','leather_strap','padded_lining','wooden_shaft','shield_board','flux','clay_slurry']]}})

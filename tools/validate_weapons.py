@@ -10,7 +10,7 @@ MODELS=ASSETS/'models/item'
 KINDS=re.findall(r'^\s+\w+\("([a-z_]+)"', (ROOT/'src/main/java/ru/epocharmory/WeaponKind.java').read_text(),re.M)
 METALS=('iron','bronze','gold','steel','damascus','aluminium','magnesium','titanium','diamond','netherite')
 assert len(KINDS)==18
-total_faces=0;reports={};issues=[]
+total_faces=0;reports={};issues=[];held_lengths={}
 for kind in KINDS:
     model=json.loads((MODELS/'weapons'/f'{kind}.json').read_text())
     edges=Counter();surfaces=defaultdict(set);uv_pixels=set();regions=[]
@@ -39,9 +39,13 @@ for kind in KINDS:
     if set(edges.values())!={2}:issues.append((kind,'open or non-manifold shell',dict(Counter(edges.values()))))
     dsp=model['display']
     for view in ('firstperson','thirdperson'):
-        assert dsp[f'{view}_lefthand']==dsp[f'{view}_righthand'],(kind,'double left-hand mirroring')
+        right,left=dsp[f'{view}_righthand'],dsp[f'{view}_lefthand']
+        assert left['rotation']==[right['rotation'][0],-right['rotation'][1],-right['rotation'][2]],(kind,'vanilla left-hand mirroring')
+        assert left['translation']==right['translation'] and left['scale']==right['scale'],(kind,'asymmetric grip')
     assert dsp['thirdperson_righthand']['translation']==[0,0,0]
-    assert abs(dsp['firstperson_righthand']['rotation'][1])<90,(kind,'blade edge-on in first person')
+    height=max(e['to'][1] for e in model['elements'])-min(e['from'][1] for e in model['elements'])
+    held_lengths[kind]=height*dsp['thirdperson_righthand']['scale'][1]
+    assert all(math.isfinite(v) for view in dsp.values() for key in ('rotation','translation','scale') for v in view[key])
     for metal in METALS:
         key=f'{metal}_{kind}'
         child=json.loads((MODELS/f'{key}_3d.json').read_text())
@@ -62,8 +66,11 @@ for kind in KINDS:
     total_faces+=len(model['elements'])
     reports[kind]={'exterior_faces':len(model['elements']),'closed_shell':True}
 assert not issues,issues
+assert held_lengths['longsword']>=held_lengths['dagger']*3,'Longsword must be substantially longer than dagger'
+assert held_lengths['longsword']>=held_lengths['arming_sword']*1.35,'Longsword must exceed one-handed sword'
+assert held_lengths['dagger']<held_lengths['gladius']<held_lengths['arming_sword']<held_lengths['longsword']<held_lengths['spear']<held_lengths['pike'],'Weapon size progression'
 report={'status':'passed','weapons':180,'shape_models':18,'exterior_faces':total_faces,'closed_manifold_shells':True,
-        'uv_overlap':False,'opaque_uv_regions':True,'grip':[8,8,8],'left_hand':'engine_mirrored',
-        'inventory':'same_3d_geometry_as_held_model','per_shape':reports}
+        'uv_overlap':False,'opaque_uv_regions':True,'grip':[8,8,8],'left_hand':'vanilla_handheld_mirroring',
+        'inventory':'same_3d_geometry_as_held_model','held_lengths':held_lengths,'per_shape':reports}
 (ROOT/'tools/weapon-validation.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({k:v for k,v in report.items() if k!='per_shape'}))

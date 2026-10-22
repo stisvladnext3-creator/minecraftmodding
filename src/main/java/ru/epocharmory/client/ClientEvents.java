@@ -6,6 +6,7 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.item.*;
+import net.minecraft.world.InteractionHand;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -27,6 +28,12 @@ public final class ClientEvents {
                 return MODELS.computeIfAbsent(key,k->new HistoricalArmorModel(a.style,slot));
             }
         },armor);
+        Item[] longswords=Content.ALL.values().stream().map(h->h.get()).filter(i->i instanceof HistoricalWeapon w&&w.kind==WeaponKind.LONGSWORD).toArray(Item[]::new);
+        e.registerItem(new IClientItemExtensions(){
+            @Override public HumanoidModel.ArmPose getArmPose(LivingEntity entity,InteractionHand hand,ItemStack stack){
+                return hand==InteractionHand.MAIN_HAND&&Combat.readyLongsword(entity)?LongswordRendering.POSE.getValue():null;
+            }
+        },longswords);
     }
     @SubscribeEvent public static void setup(net.neoforged.fml.event.lifecycle.FMLClientSetupEvent e){e.enqueueWork(()->{
         for(var holder:Content.ALL.values())if(holder.get() instanceof HistoricalShield shield)

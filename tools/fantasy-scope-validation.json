@@ -1,11 +1,17 @@
 {
-  "source_baseline": "EpochArmory-1.0.4-NeoForge-1.21.1-source.zip",
-  "unchanged_gameplay_data_language_files": 809,
-  "changed_java_files": [
-    "src/main/java/ru/epocharmory/test/ArmorVisualProbe.java",
-    "src/main/java/ru/epocharmory/test/ShieldVisualProbe.java",
-    "src/main/java/ru/epocharmory/test/WeaponVisualProbe.java"
+  "base_release": "1.1.0",
+  "mod": "1.1.1",
+  "item_ids_recipes_numeric_stats": "unchanged",
+  "authorized_behavior_change": "Longsword requires empty offhand; blocks attacks and offhand item use; two-handed client rendering",
+  "visual_changes": [
+    "lamellar forehead bar removed",
+    "vanilla sword held directions",
+    "weapon size progression in hands and inventory"
   ],
-  "java_changes": "visual probe captions only",
-  "item_ids_recipes_combat": "unchanged"
+  "authoritative_unchanged_files": [
+    "src/main/java/ru/epocharmory/WeaponKind.java",
+    "src/main/java/ru/epocharmory/Metal.java",
+    "src/main/java/ru/epocharmory/Content.java",
+    "src/main/resources/data"
+  ]
 }

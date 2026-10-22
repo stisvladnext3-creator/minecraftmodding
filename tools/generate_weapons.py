@@ -17,6 +17,13 @@ SIZE=256
 KINDS=('arming_sword','longsword','mace','spear','katana','dagger','morningstar','battleaxe',
        'halberd','war_hammer','rapier','sabre','gladius','kukri','katar','naginata','pike','flail')
 POLES={'spear','halberd','naginata','pike'}
+# Total held length in model units (16 units = one Minecraft block).
+# A dagger is 0.5 blocks, an arming sword 1.25, a longsword 1.875,
+# and a pike 2.75. All materials of a shape retain the same dimensions.
+HELD_LENGTHS={'dagger':8,'katar':9,'kukri':11,'gladius':14,'mace':16,
+              'morningstar':18,'war_hammer':19,'arming_sword':20,'sabre':21,
+              'flail':22,'rapier':23,'katana':24,'battleaxe':24,'longsword':30,
+              'spear':34,'naginata':35,'halberd':36,'pike':44}
 
 def metals():
     tree=ast.parse((ROOT/'tools/generate_content.py').read_text())
@@ -290,17 +297,22 @@ def fit(a,angles,limit):
     return {'rotation':angles,'translation':[-round((lo[i]+hi[i])/2*scale,4) for i in range(3)],'scale':[round(scale,4)]*3}
 
 def display(a):
-    kind=a.kind;pole=kind in POLES
-    third=65 if pole else 0 if kind=='katar' else 48 if kind in ('mace','morningstar','war_hammer','flail') else 37
-    first_scale=.68 if pole else .73 if kind=='flail' else .82 if kind in ('longsword','battleaxe','morningstar') else .90
-    first_rot=[-22,-20,-12] if pole else [-58,-15,-12] if kind=='katar' else [-12,-28,-12]
-    if kind in ('battleaxe','war_hammer','flail'):first_rot=[-12,25,-12]
-    elif kind in ('katana','sabre'):first_rot=[-12,18,-12]
+    kind=a.kind
+    held_scale=HELD_LENGTHS[kind]/(a.high[1]-a.low[1])
+    first_scale=held_scale*.72
     result={}
-    for hand in ('right','left'):
-        result[f'thirdperson_{hand}hand']={'rotation':[third,0,0],'translation':[0,0,0],'scale':[1,1,1]}
-        result[f'firstperson_{hand}hand']={'rotation':first_rot,'translation':[-2,-1,-1],'scale':[first_scale]*3}
-    result['gui']=fit(a,[15,-35,-35],13.2)
+    for hand,sign in (('right',1),('left',-1)):
+        # Minecraft 1.21.1 item/handheld uses (0,-90,55) in third person
+        # and (0,-90,25) in first person, mirrored in the left-hand entry.
+        # Its sword sprite runs diagonally along X+Y; our meshes run along Y.
+        # Subtract 45 degrees of Z rotation to match the actual blade axis.
+        # Keep the mesh's grip pivot at (8,8,8), rather than copying the
+        # translation that compensates for a vanilla sprite's off-centre grip.
+        result[f'thirdperson_{hand}hand']={'rotation':[0,-90*sign,10*sign],'translation':[0,0,0],'scale':[held_scale]*3}
+        result[f'firstperson_{hand}hand']={'rotation':[0,-90*sign,-20*sign],'translation':[-2,-1,-1],'scale':[first_scale]*3}
+    # Inventory icons also convey the difference without making small blades
+    # unreadable; do not auto-fit every weapon to the same icon dimensions.
+    result['gui']=fit(a,[15,-35,-35],13.2*math.sqrt(HELD_LENGTHS[kind]/44))
     result['fixed']=fit(a,[0,0,-35],14)
     result['ground']=fit(a,[0,0,0],10)
     result['ground']['translation'][1]=round(2+(a.high[1]-a.low[1])*result['ground']['scale'][1]/2,4)
@@ -309,7 +321,7 @@ def display(a):
 def icon(a,col,metal):
     # Exact technical projection of the same mesh for consumers of item PNGs.
     im=Image.new('RGBA',(64,64));d=ImageDraw.Draw(im)
-    t=fit(a,[15,-35,-35],26);scale=t['scale'][0]*2;ang=t['rotation'];centre=t['translation']
+    t=fit(a,[15,-35,-35],26*math.sqrt(HELD_LENGTHS[a.kind]/44));scale=t['scale'][0]*2;ang=t['rotation'];centre=t['translation']
     polys=[]
     normals={'north':(0,0,-1),'south':(0,0,1),'east':(1,0,0),'west':(-1,0,0),'up':(0,1,0),'down':(0,-1,0)}
     for f in a.faces:
@@ -332,7 +344,7 @@ def main():
         a=make(kind);used=pack(a);dsp=display(a)
         elements=[{'from':f['from'],'to':f['to'],'faces':{f['side']:{'texture':'#surface','uv':[v/16 for v in f['uv']]}}} for f in a.faces]
         put(MODELS/'weapons'/f'{kind}.json',{'ambientocclusion':False,'elements':elements,'display':dsp})
-        report[kind]={'parts':a.parts,'exterior_faces':len(a.faces),'bounds':[a.low,a.high],'grip':[8,8,8],'atlas_height':used,'texture_size':SIZE,'closed_edge_junctions':a.bridges}
+        report[kind]={'parts':a.parts,'exterior_faces':len(a.faces),'bounds':[a.low,a.high],'grip':[8,8,8],'atlas_height':used,'texture_size':SIZE,'closed_edge_junctions':a.bridges,'held_length':HELD_LENGTHS[kind]}
         for metal,(_,col) in palette.items():
             key=f'{metal}_{kind}';target=directory/f'{key}.png';temp=target.with_suffix('.png.tmp')
             texture(a,metal,col).save(temp,format='PNG',optimize=True);temp.replace(target)

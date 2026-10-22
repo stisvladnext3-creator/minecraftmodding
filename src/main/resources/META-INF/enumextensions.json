@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "enum": "net/minecraft/client/model/HumanoidModel$ArmPose",
+      "name": "EPOCHARMORY_LONGSWORD",
+      "constructor": "(ZLnet/neoforged/neoforge/client/IArmPoseTransformer;)V",
+      "parameters": {
+        "class": "ru/epocharmory/client/LongswordRendering",
+        "field": "POSE"
+      }
+    }
+  ]
+}

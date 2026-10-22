@@ -21,7 +21,8 @@
     ],
     "atlas_height": 50,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 20
   },
   "longsword": {
     "parts": 492,
@@ -45,7 +46,8 @@
     ],
     "atlas_height": 53,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 30
   },
   "mace": {
     "parts": 498,
@@ -69,7 +71,8 @@
     ],
     "atlas_height": 40,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 16
   },
   "spear": {
     "parts": 283,
@@ -93,7 +96,8 @@
     ],
     "atlas_height": 32,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 34
   },
   "katana": {
     "parts": 355,
@@ -117,7 +121,8 @@
     ],
     "atlas_height": 35,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 24
   },
   "dagger": {
     "parts": 217,
@@ -141,7 +146,8 @@
     ],
     "atlas_height": 35,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 8
   },
   "morningstar": {
     "parts": 50,
@@ -165,7 +171,8 @@
     ],
     "atlas_height": 31,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 18
   },
   "battleaxe": {
     "parts": 403,
@@ -189,7 +196,8 @@
     ],
     "atlas_height": 48,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 24
   },
   "halberd": {
     "parts": 468,
@@ -213,7 +221,8 @@
     ],
     "atlas_height": 42,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 36
   },
   "war_hammer": {
     "parts": 111,
@@ -237,7 +246,8 @@
     ],
     "atlas_height": 38,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 19
   },
   "rapier": {
     "parts": 138,
@@ -261,7 +271,8 @@
     ],
     "atlas_height": 52,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 23
   },
   "sabre": {
     "parts": 367,
@@ -285,7 +296,8 @@
     ],
     "atlas_height": 37,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 21
   },
   "gladius": {
     "parts": 354,
@@ -309,7 +321,8 @@
     ],
     "atlas_height": 44,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 14
   },
   "kukri": {
     "parts": 311,
@@ -333,7 +346,8 @@
     ],
     "atlas_height": 32,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 11
   },
   "katar": {
     "parts": 274,
@@ -357,7 +371,8 @@
     ],
     "atlas_height": 30,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 9
   },
   "naginata": {
     "parts": 249,
@@ -381,7 +396,8 @@
     ],
     "atlas_height": 30,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 35
   },
   "pike": {
     "parts": 98,
@@ -405,7 +421,8 @@
     ],
     "atlas_height": 24,
     "texture_size": 256,
-    "closed_edge_junctions": 0
+    "closed_edge_junctions": 0,
+    "held_length": 44
   },
   "flail": {
     "parts": 70,
@@ -429,6 +446,7 @@
     ],
     "atlas_height": 39,
     "texture_size": 256,
-    "closed_edge_junctions": 2
+    "closed_edge_junctions": 2,
+    "held_length": 22
   }
 }

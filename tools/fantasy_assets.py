@@ -162,7 +162,6 @@ def helmet(a):
             # Swept segmented horns with a restrained width.
             for i in range(3):
                 a.loft('head','head',[(-8-i*.9,1.5-i*.3,2-i*.3,sign*(4.3+i*.5),.9+i*.6),(-7.2-i*.9,1.8-i*.3,2.2-i*.3,sign*(4+i*.5),.6+i*.6)],'trim',.3)
-        a.box('head','head',-3.5,-5.2,-4.75,7,1,.5,'visor')
         a.box('head','head',-.5,-5,-4.9,1,4.5,.6,'metal')
         a.loft('head','head',[(-4.9,8.5,1.5,0,4),(1,8,1.5,0,4.2)],'lamellar',.5)
         gem(a,'head','head',0,-7,-4.7,.65)

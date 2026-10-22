@@ -11,8 +11,28 @@
     8,
     8
   ],
-  "left_hand": "engine_mirrored",
+  "left_hand": "vanilla_handheld_mirroring",
   "inventory": "same_3d_geometry_as_held_model",
+  "held_lengths": {
+    "arming_sword": 20.0,
+    "longsword": 30.0,
+    "mace": 16.0,
+    "spear": 34.0,
+    "katana": 24.0,
+    "dagger": 8.0,
+    "morningstar": 18.0,
+    "battleaxe": 24.0,
+    "halberd": 36.0,
+    "war_hammer": 19.0,
+    "rapier": 23.0,
+    "sabre": 21.0,
+    "gladius": 14.000000000000002,
+    "kukri": 11.0,
+    "katar": 9.0,
+    "naginata": 35.0,
+    "pike": 44.0,
+    "flail": 22.0
+  },
   "per_shape": {
     "arming_sword": {
       "exterior_faces": 332,

@@ -18,6 +18,8 @@ import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.neoforge.common.damagesource.DamageContainer;
 import net.neoforged.neoforge.event.entity.living.LivingShieldBlockEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.gametest.*;
 import ru.epocharmory.*;
 
@@ -147,5 +149,49 @@ public final class WorkshopGameTests {
         Combat.tick(new PlayerTickEvent.Post(p));h.assertTrue(p.getAttributeValue(Attributes.MOVEMENT_SPEED)<base,"Heavy gold armor has a movement cost");
         for(var piece:Content.PIECES)p.setItemSlot(piece.getSlot(),ItemStack.EMPTY);Combat.tick(new PlayerTickEvent.Post(p));
         h.assertTrue(Math.abs(p.getAttributeValue(Attributes.MOVEMENT_SPEED)-base)<.00001,"Unequipping must remove penalties");h.succeed();
+    }
+    @GameTest(template="empty") public static void longswordCannotAttackWithAnyOffhandItem(GameTestHelper h){
+        var p=player(h);p.setGameMode(net.minecraft.world.level.GameType.SURVIVAL);
+        var target=h.spawnWithNoFreeWill(EntityType.HUSK,new BlockPos(5,2,3));float health=target.getHealth();
+        for(var metal:Metal.values())for(var offhand:List.of(new ItemStack(Items.SHIELD),Content.stack("steel_heater_shield"),new ItemStack(Items.APPLE))){
+            int originalCount=offhand.getCount();
+            p.setItemSlot(EquipmentSlot.MAINHAND,Content.stack(metal.key+"_longsword"));p.setItemSlot(EquipmentSlot.OFFHAND,offhand);
+            p.attack(target);
+            h.assertTrue(target.getHealth()==health,"Occupied offhand must prevent real Player.attack, including vanilla shield and ordinary items");
+            h.assertTrue(!target.hurt(p.damageSources().playerAttack(p),10),"Direct damage path must also reject an occupied longsword");
+            h.assertTrue(target.getHealth()==health&&p.getOffhandItem().getCount()==originalCount,"Blocked attack must not deal damage or consume offhand items");
+        }
+        p.setItemSlot(EquipmentSlot.OFFHAND,ItemStack.EMPTY);
+        h.runAfterDelay(25,()->{
+            p.attack(target);
+            h.assertTrue(target.getHealth()<health,"Emptying the offhand must immediately restore a real longsword attack");h.succeed();
+        });
+    }
+    @GameTest(template="empty") public static void longswordDisablesOffhandUseAndRestoresOtherWeapons(GameTestHelper h){
+        var p=player(h);p.setItemSlot(EquipmentSlot.MAINHAND,Content.stack("steel_longsword"));
+        var target=h.spawnWithNoFreeWill(EntityType.HUSK,new BlockPos(5,2,3));
+        for(var item:List.of(new ItemStack(Items.SHIELD),Content.stack("steel_heater_shield"),new ItemStack(Items.APPLE))){
+            p.setItemSlot(EquipmentSlot.OFFHAND,item);p.startUsingItem(InteractionHand.OFF_HAND);
+            h.assertTrue(!p.isUsingItem(),"Longsword must prevent the actual offhand item-use lifecycle");
+            var click=new PlayerInteractEvent.RightClickItem(p,InteractionHand.OFF_HAND);NeoForge.EVENT_BUS.post(click);
+            h.assertTrue(click.isCanceled()&&click.getCancellationResult()==InteractionResult.FAIL,"Offhand right click must be denied through the registered event bus");
+            var interact=new PlayerInteractEvent.EntityInteract(p,InteractionHand.OFF_HAND,target);NeoForge.EVENT_BUS.post(interact);
+            h.assertTrue(interact.isCanceled(),"Offhand entity interaction must also be denied");
+        }
+        p.setItemSlot(EquipmentSlot.MAINHAND,Content.stack("steel_arming_sword"));p.setItemSlot(EquipmentSlot.OFFHAND,new ItemStack(Items.SHIELD));
+        p.startUsingItem(InteractionHand.OFF_HAND);
+        h.assertTrue(p.isUsingItem(),"One-handed sword must still allow a vanilla shield");h.succeed();
+    }
+    @GameTest(template="empty") public static void equippingLongswordInterruptsAnExistingShieldBlock(GameTestHelper h){
+        var p=player(h);var mob=h.spawnWithNoFreeWill(EntityType.HUSK,new BlockPos(5,2,3));
+        for(var shield:List.of(new ItemStack(Items.SHIELD),Content.stack("steel_heater_shield"))){
+            p.setItemSlot(EquipmentSlot.MAINHAND,Content.stack("steel_arming_sword"));p.setItemSlot(EquipmentSlot.OFFHAND,shield);p.startUsingItem(InteractionHand.OFF_HAND);
+            h.assertTrue(p.isUsingItem(),"Control: shield was active before changing the weapon");
+            p.setItemSlot(EquipmentSlot.MAINHAND,Content.stack("steel_longsword"));Combat.tick(new PlayerTickEvent.Post(p));
+            h.assertTrue(!p.isUsingItem(),"Switching to longsword must terminate an already raised shield");
+            var block=new LivingShieldBlockEvent(p,new DamageContainer(p.damageSources().mobAttack(mob),10),true);Combat.shield(block);
+            h.assertTrue(!block.getBlocked(),"Neither vanilla nor mod shields may block alongside a longsword");
+        }
+        h.succeed();
     }
 }
