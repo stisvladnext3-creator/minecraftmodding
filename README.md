@@ -4,8 +4,9 @@
 
 ## Скачать
 
-- **[Готовый мод — JAR](https://github.com/stisvladnext3-creator/minecraftmodding/releases/download/v1.1.0/epocharmory-1.1.0%2Bmc1.21.1.jar)**
-- **[Полные исходники — ZIP](https://github.com/stisvladnext3-creator/minecraftmodding/releases/download/v1.1.0/EpochArmory-1.1.0-NeoForge-1.21.1-source.zip)**
+- **[Готовый мод — JAR](https://github.com/stisvladnext3-creator/minecraftmodding/raw/refs/tags/v1.1.0/downloads/v1.1.0/epocharmory-1.1.0%2Bmc1.21.1.jar)**
+- **[Полные исходники — ZIP](https://github.com/stisvladnext3-creator/minecraftmodding/archive/refs/tags/v1.1.0.zip)**
+- [Контрольная сумма JAR](downloads/v1.1.0/SHA256SUMS.txt)
 - [Страница релиза и контрольные суммы](https://github.com/stisvladnext3-creator/minecraftmodding/releases/tag/v1.1.0)
 
 Установи NeoForge 21.1.262 для Minecraft 1.21.1 и положи JAR в папку `mods`. При обновлении убери предыдущий JAR Epoch Armory. Этот же файл используется на клиенте и сервере. Дополнительные моды не требуются.
